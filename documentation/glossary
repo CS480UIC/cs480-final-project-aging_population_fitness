@@ -1,8 +1,16 @@
-User
+Entity: User
   -Documentation name: user
   -Synonyms: member, person
   -Description: entity containing information on user's name and id
+  -minimum 0, maximum 1
   
- Exercise
-  -Documentation name: exercise
-   -Synonyms: workout, 
+ Entity: User Login
+  -Documentation name: user_login
+  -Synonyms: email, password
+  
+Entity: Exercise
+   -Documentation name: exercise
+   -Synonyms: workout, lift
+   -Description: data regarding different types of exercise
+   
+Entity: 
