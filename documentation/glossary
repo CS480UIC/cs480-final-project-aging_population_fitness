@@ -2,7 +2,6 @@ Entity: User
   -Documentation name: user
   -Synonyms: member, person
   -Description: entity containing information on user's name and id
-  -
   
  Entity: User Login
   -Documentation name: user_login
