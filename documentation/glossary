@@ -1,0 +1,8 @@
+User
+  -Documentation name: user
+  -Synonyms: member, person
+  -Description: entity containing information on user's name and id
+  
+ Exercise
+  -Documentation name: exercise
+   -Synonyms: workout, 
