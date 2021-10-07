@@ -42,3 +42,37 @@ Relationship: holds
 Relationship: includes
   -one user includes one user_login
   -one user_login includes one user
+  
+
+exercise ttributes:
+  PK exercise_id int NOT NULL 1-1(1)
+  name char(50) NOT NULL M-1 (1)
+  description char(1000) NOT NULL M-1 (1) 
+  
+exercise_injury attributes:
+  PK injury_id int NOT NULL 1-1 (1)
+  FK exercise_id NOT NULL M-1 (1)
+  name char(50) NOT NULL M-1 (1)
+  description char(50) NOT NULL M-1 (1)
+  
+user attributes:
+  PK user_id int NOT NULL 1-1 (1)
+  FK user_login_id int NOT NULL 1-1(1)
+  user_name char(50) NOT NULL M-1(1)
+  
+user_login attributes:
+  PK user_login_id int NOT NULL 1-1 (1)
+  email char(50) NOT NULL 1-1 (1)
+  password char(50) NOT NULL M-1 (1)
+
+user_injury attributes:
+  PK injury_id int NOT NULL 1-1 (1)
+  FK user_id M-1 (1)
+  name char(50) NOT NULL M-1(1)
+  description char(50) NOT NULL 1-1(0)
+  
+benefit attributes:
+  PK benfit_id int NOT NULL 1-1(1)
+  FK exercise_id int NOT NULL M-1(1)
+  name char(50) NOT NULL M-1(1)
+  description char(50) NOT NULL M-1(1)
