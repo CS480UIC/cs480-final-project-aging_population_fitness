@@ -2,7 +2,7 @@ Entity: User
   -Documentation name: user
   -Synonyms: member, person
   -Description: entity containing information on user's name and id
-  -minimum 0, maximum 1
+  -
   
  Entity: User Login
   -Documentation name: user_login
@@ -13,4 +13,17 @@ Entity: Exercise
    -Synonyms: workout, lift
    -Description: data regarding different types of exercise
    
-Entity: 
+Entity: Exercise Injury
+  -Documentation: exercise_injury
+  -Synonyms: injury, injuries, hurt
+  -Description: possible exercises that user can do to avoid aggravating their current injury
+  
+Entity: User Injury
+  -Documentation: user_injury
+  -Synonyms: injury, injuries, hurt
+  -Description: injury that user has or may have
+  
+Entity: Benefit
+  -Documentation: benefit
+  -Synonyms: heplful, beneficial, alternate
+  -Description: the benefit that user gains from related exercise
