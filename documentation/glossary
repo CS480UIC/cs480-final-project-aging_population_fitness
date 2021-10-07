@@ -26,3 +26,19 @@ Entity: Benefit
   -Documentation: benefit
   -Synonyms: heplful, beneficial, alternate
   -Description: the benefit that user gains from related exercise
+
+Relationship: prevents
+  -one exercise is not done if zero or many exercise_injury exist
+  -zero or many exercise_injury prevents one exercise
+    
+Relationship: has
+  -one exercise has one or many benefit
+  -one or many benefits has one exercise
+  
+Relationship: holds
+  -one user holds zero or many user_injury
+  -zero or many user_injury holds one user
+  
+Relationship: includes
+  -one user includes one user_login
+  -one user_login includes one user
