@@ -76,3 +76,30 @@ benefit attributes:
   FK exercise_id int NOT NULL M-1(1)
   name char(50) NOT NULL M-1(1)
   description char(50) NOT NULL M-1(1)
+  
+Dependent Entities:
+
+  exercise_injury depends on exercise 
+      ON DELETE CASCADE
+  benefit depnds on exercise
+      ON DELETE CASCADE
+  user depends on user_login
+      ON DELETE CASCADE
+  user_injury depends on user
+      ON DELETE CASCADE
+  
+Super types, subtypes and partitions:
+NA
+
+FOREIGN KEY exercise_id (in exercise_injury)
+      ON DELETE CASCADE
+      
+FOREIGN KEY user_login_id     
+      ON DELETE CASCADE
+
+FOREIGN KEY exercise_id (in benefit)
+      ON DELETE CASCADE
+      
+FOREIGN KEY user_id (in benefit)
+      ON DELETE CASCADE
+      
