@@ -103,3 +103,50 @@ FOREIGN KEY exercise_id (in benefit)
 FOREIGN KEY user_id (in benefit)
       ON DELETE CASCADE
       
+Attribute Type: exercise_id
+Data Type: int
+Description: gives an id number to each exercise
+
+Attribute Type: exercise_name
+Data Type: VARCHAR(50)
+Description: gives a name to the exercise
+
+Attribute Type: exercise_description
+Data Type: VARCHAR(1000)
+Description: provides a description of the exercise
+
+Attribute Type: exercise_injury_name
+Data Type: VARCHAR(50)
+Description: gives a name to each alternative exercise
+
+Attribute Type: exercise_injury_description
+Data Type: VARCHAR(1000)
+Description: provides a description to each alternate exercise
+
+Attribute Type: user_name
+Data Type: VARCHAR(50)
+Description: the user's username on the application
+
+Attribute Type: email
+Data Type: VARCHAR(50)
+Description: user's login information regarding email
+
+Attribute Type: password
+Data Type: VARCHAR(50)
+Description: user's login information regarding password
+
+Attribute Type: user_injury_name
+Data Type: VARCHAR(50)
+Description: the diagnosis of the user's injury
+
+Attribute Type: user_injury_description
+Data Type: VARCHAR(1000)
+Description: description of the user's specific injury
+
+Attribute Type: benefit_name
+Data Type: VARCHAR(50)
+Description: gives a name to the specific benefit the alternate injury provides
+
+Attribute Type: benefit_description
+Data Type: VARCHAR(1000)
+Description: description of the benefit the alternate injury provides
