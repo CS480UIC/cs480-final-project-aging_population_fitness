@@ -44,6 +44,8 @@
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/user_profile/menu.jsp'/>" target="body">CRUD User Profile</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/user_injury/menu.jsp'/>" target="body">CRUD User Injury</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>
