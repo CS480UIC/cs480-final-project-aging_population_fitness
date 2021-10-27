@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">Thomas Kubik</h1>
+<h1 style="text-align: center;">Aging Population Fitness</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
