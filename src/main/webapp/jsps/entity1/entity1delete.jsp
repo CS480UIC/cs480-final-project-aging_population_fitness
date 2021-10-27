@@ -27,6 +27,7 @@
 	Delete User   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
+
 	<input type="submit" value="Delete Entity1"/>
 </form>
   </body>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Entity1</title>
+    <title>Update Use Profile</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,19 @@
   </head>
   
   <body>
-  <h1>Update</h1>
+  <h1>Update User Profile</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update User ID   :<input type="text" name="username" value="${form.username }"/>
+	Update User ID   :<input type="text" name="user_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Update User Login   :<input type="text" name="user_login" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>
+	Update User Name   :<input type="text" name="user_name" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>
+	<input type="submit" value="Update User Profile"/>
 </form>
   </body>
 </html>

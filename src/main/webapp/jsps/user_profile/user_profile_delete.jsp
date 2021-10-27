@@ -27,6 +27,12 @@
 	Delete User ID   :<input type="text" name="user_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
+	Delete User Login   :<input type="text" name="user_login" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>
+	Delete User Name   :<input type="text" name="user_name" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>
 	<input type="submit" value="Delete User Profile"/>
 </form>
   </body>
