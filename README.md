@@ -23,4 +23,4 @@ The database will contain excersises aimed at fitness for an aging popualtion. T
 ### CRUD Screenshots
 
   * CRUD User
-    ![](/CRUDScreenshots/CRUD user.jpg)
+  ![](/CRUDScreenshots/CRUD user.jpg)
