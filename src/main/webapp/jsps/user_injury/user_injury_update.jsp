@@ -27,15 +27,7 @@
 	Update Injury ID   :<input type="text" name="injury_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Update User ID   :<input type="text" name="user_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Update User Injury Name   :<input type="text" name="user_injury_name" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Update User Injury Description   :<input type="text" name="user_injury_description" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
+
 	<input type="submit" value="Update User Injury"/>
 </form>
   </body>

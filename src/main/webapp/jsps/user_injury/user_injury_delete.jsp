@@ -24,18 +24,10 @@
   <h1>Delete User Injury</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete User Injury ID   :<input type="text" name="user_injury_id" value="${form.username }"/>
+	Delete Injury ID   :<input type="text" name="user_injury_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Delete User ID   :<input type="text" name="user_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Delete User Injury Name   :<input type="text" name="user_injury_name" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Delete User Injury Description   :<input type="text" name="user_injury_description" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
+
 	<input type="submit" value="Delete User Injury"/>
 </form>
   </body>

@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for User Profile </h1>
+    <h1>CRUD operations for User </h1>
     <br>
-	<a href="<c:url value='/jsps/user_profile/user_profile_create.jsp'/>" target="_parent">Create User Profile</a> |&nbsp; 
-	<a href="<c:url value='/jsps/user_profile/user_profile_read.jsp'/>" target="_parent">Read User Profile</a> |&nbsp;
-	<a href="<c:url value='/jsps/user_profile/user_profile_update.jsp'/>" target="_parent">Update User Profile</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/user_profile/user_profile_delete.jsp'/>" target="_parent">Delete User Profile</a>	
+	<a href="<c:url value='/jsps/user_profile/user_profile_create.jsp'/>" target="_parent">Create User</a> |&nbsp; 
+	<a href="<c:url value='/jsps/user_profile/user_profile_read.jsp'/>" target="_parent">Read User</a> |&nbsp;
+	<a href="<c:url value='/jsps/user_profile/user_profile_update.jsp'/>" target="_parent">Update User</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/user_profile/user_profile_delete.jsp'/>" target="_parent">Delete User</a>	
 	    
   </body>
 </html>

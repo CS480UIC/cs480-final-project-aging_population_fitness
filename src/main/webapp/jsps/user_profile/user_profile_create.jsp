@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Create User Profile</title>
+    <title>Create User</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Create User Profile</h1>
+  <h1>Create User</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
 	User ID    :<input type="text" name="user_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
@@ -32,7 +32,7 @@
 	User Name	：<input type="text" name="user_name" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create User Profile"/>
+	<input type="submit" value="Create User"/>
 </form>
   </body>
 </html>

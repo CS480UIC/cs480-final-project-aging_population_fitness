@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete User Profile</title>
+    <title>Delete User</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,14 @@
   </head>
   
   <body>
-  <h1>Delete User Profile</h1>
+  <h1>Delete User</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete User ID   :<input type="text" name="user_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Delete User Login   :<input type="text" name="user_login" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Delete User Name   :<input type="text" name="user_name" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	<input type="submit" value="Delete User Profile"/>
+
+	<input type="submit" value="Delete User"/>
 </form>
   </body>
 </html>
