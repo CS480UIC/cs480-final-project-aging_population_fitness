@@ -1,0 +1,6 @@
+user_id,user_injury_name,user_injury_description,user_injury_severity,user_injury_date
+1,Sprained Ankle,Swollen sore ankle with a bruise,2,2021-10-01'
+1,strained calf,sharp pain in left calf muscle,6,2021-10-02'
+3,broken toe,right pinky toe is broken,4,2021-10-03'
+4,Slipped disk,L4 disk slipped in lower back,9,2021-10-04'
+5,Sprained Knee,left knee is sore and it hurts to bend it,3,2021-10-05'
