@@ -23,4 +23,36 @@ The database will contain excersises aimed at fitness for an aging popualtion. T
 ### CRUD Screenshots
 
   * CRUD User
-  ![](CRUDScreenshots/CRUD user.jpg)
+  ![](CRUDScreenshots/CRUDuser.jpg)
+  * Create User
+  ![](CRUDScreenshots/createuser.jpg)
+  * Read User
+  ![](CRUDScreenshots/readuser.jpg)
+  * Update User
+  ![](CRUDScreenshots/updateuser.jpg)
+  * Delete User
+  ![](CRUDScreenshots/deleteuser.jpg)
+  
+  * CRUD User Injury
+  ![](CRUDScreenshots/CRUDuserinjury.jpg)
+  * Create User Injury
+  ![](CRUDScreenshots/createuserinjury.jpg)
+  * Read User Injury
+  ![](CRUDScreenshots/readuserinjury.jpg)
+  * Update User Injury
+  ![](CRUDScreenshots/updateuserinjury.jpg)
+  * Delete User Injury
+  ![](CRUDScreenshots/deleteuserinjury.jpg)
+  
+  * CRUD Benefit
+  ![](CRUDScreenshots/CRUDbenefit.jpg)
+  * Create Benefit
+  ![](CRUDScreenshots/createbenefit.jpg)
+  * Read Benefit
+  ![](CRUDScreenshots/readbenefit.jpg)
+  * Update Benefit
+  ![](CRUDScreenshots/updatebenefit.jpg)
+  * Delete Benefit
+  ![](CRUDScreenshots/deletebenefit.jpg)
+  
+  
