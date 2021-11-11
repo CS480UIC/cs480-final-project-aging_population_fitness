@@ -78,7 +78,9 @@ CREATE TABLE `exercise` (
   `exercise_id` int unsigned NOT NULL AUTO_INCREMENT,
   `exercise_name` varchar(50) NOT NULL,
   `exercise_description` varchar(1000) NOT NULL,
-  PRIMARY KEY (`exercise_id`)
+  `exercise_difficulty` smallint unsigned NOT NULL,
+  PRIMARY KEY (`exercise_id`),
+  CONSTRAINT `exercise_chk_1` CHECK (((`exercise_difficulty` > 0) and (`exercise_difficulty` < 11)))
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -88,7 +90,7 @@ CREATE TABLE `exercise` (
 
 LOCK TABLES `exercise` WRITE;
 /*!40000 ALTER TABLE `exercise` DISABLE KEYS */;
-INSERT INTO `exercise` VALUES (1,'chest press','one lies supine on a bench and with both hands pushes a barbell or fixed weight upward from chest level to arm\'s length and then lowers it back to chest level'),(2,'leg press',' individual pushes a weight or resistance away from them using their legs'),(3,'treadmill walk','Treadmills usually feature adjustable speeds and inclines to vary your workout, allowing you to simulate a hill with the push of a button'),(4,'dumbbell row','compound exercise that mainly target your middle back, but also work the biceps, shoulders, and lats'),(5,'weighted situps','Hold the weight against your chest and lie on your back. Bend your knees at a 90-degree angle, and keep your feet firmly planted on the floor. While holding the weight, slowly contract your core and raise your upper body toward your knees until your forearms touch your thighs. Your hip and feet should remain on the floor.');
+INSERT INTO `exercise` VALUES (1,'chest press','one lies supine on a bench and with both hands pushes a barbell or fixed weight upward from chest level to arm\'s length and then lowers it back to chest level',2),(2,'leg press',' individual pushes a weight or resistance away from them using their legs',7),(3,'treadmill walk','Treadmills usually feature adjustable speeds and inclines to vary your workout, allowing you to simulate a hill with the push of a button',5),(4,'dumbbell row','compound exercise that mainly target your middle back, but also work the biceps, shoulders, and lats',3),(5,'weighted situps','Hold the weight against your chest and lie on your back. Bend your knees at a 90-degree angle, and keep your feet firmly planted on the floor. While holding the weight, slowly contract your core and raise your upper body toward your knees until your forearms touch your thighs. Your hip and feet should remain on the floor.',2);
 /*!40000 ALTER TABLE `exercise` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +163,8 @@ CREATE TABLE `user_injury` (
   `user_injury_date` date DEFAULT NULL,
   PRIMARY KEY (`injury_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `user_injury_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user_profile` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `user_injury_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user_profile` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_injury_chk_1` CHECK (((`user_injury_severity` > 0) and (`user_injury_severity` < 11)))
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -211,4 +214,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-10 21:45:47
+-- Dump completed on 2021-11-11 11:34:26
