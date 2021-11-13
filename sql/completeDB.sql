@@ -42,7 +42,6 @@ CREATE TABLE `benefit` (
   `benefit_description` varchar(1000) NOT NULL,
   PRIMARY KEY (`benefit_id`),
   KEY `exercise_id` (`exercise_id`),
-  KEY `benefit_name_index` (`benefit_name`),
   CONSTRAINT `benefit_ibfk_1` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -124,7 +123,7 @@ CREATE TABLE `exercise` (
   `exercise_description` varchar(1000) NOT NULL,
   `exercise_difficulty` smallint unsigned NOT NULL,
   PRIMARY KEY (`exercise_id`),
-  KEY `exercise_difficulty_index` (`exercise_difficulty`),
+  UNIQUE KEY `exercise_name` (`exercise_name`),
   CONSTRAINT `exercise_chk_1` CHECK (((`exercise_difficulty` > 0) and (`exercise_difficulty` < 11)))
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -167,7 +166,6 @@ CREATE TABLE `exercise_injury` (
   `exercise_injury_description` varchar(1000) NOT NULL,
   PRIMARY KEY (`injury_id`),
   KEY `exercise_id` (`exercise_id`),
-  KEY `exercise_injury_name_index` (`exercise_injury_name`),
   CONSTRAINT `exercise_injury_ibfk_1` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -509,4 +507,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-13 15:51:31
+-- Dump completed on 2021-11-13 17:24:54
