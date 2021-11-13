@@ -44,7 +44,15 @@ WHERE EXISTS
 	FROM exercise
 	WHERE exercise_id = B.exercise_id AND exercise_description LIKE '%chest%');
     
-
+CREATE VIEW `users_more_than_two_injuries` AS
+SELECT user_id, profile_name
+FROM user_profile A
+WHERE 2 <=
+	(SELECT COUNT(*)
+	FROM user_injury
+    WHERE user_id = A.user_id
+    GROUP BY user_id);
+    
 
 
 
