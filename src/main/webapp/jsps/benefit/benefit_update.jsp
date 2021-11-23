@@ -27,7 +27,15 @@
 	Update Benefit ID   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-
+	Exercise ID：<input type="text" name="exercise_id" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
+	<br/>
+	Benefit Name	：<input type="text" name="benefit_name" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	Benefit Description	：<input type="text" name="benefit_description" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
 	<input type="submit" value="Update Benefit"/>
 </form>
   </body>

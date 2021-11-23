@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read User</title>
+    <title>Read User Profile</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Read User</h1>
+  <h1>Read User Profile</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
@@ -35,7 +35,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read User"/>
+	<input type="submit" value="Read User Profile"/>
 </form>
   </body>
 </html>

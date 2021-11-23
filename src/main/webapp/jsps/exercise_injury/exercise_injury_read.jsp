@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete User Profile</title>
+    <title>Read Exercise Injury</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,21 @@
   </head>
   
   <body>
-  <h1>Delete User Profile</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete User ID   :<input type="text" name="user_id" value="${form.username }"/>
+  <h1>Read Exercise Injury</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	Read Injury ID    :<input type="text" name="injury_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 
-	<input type="submit" value="Delete User Profile"/>
+<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
+	<br/>
+	Email	：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/> --%>
+	<input type="submit" value="Read Exercise Injury"/>
 </form>
   </body>
 </html>

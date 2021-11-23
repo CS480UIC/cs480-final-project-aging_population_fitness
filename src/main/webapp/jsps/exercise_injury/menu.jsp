@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Delete User Profile</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +22,12 @@
   </head>
   
   <body>
-  <h1>Delete User Profile</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete User ID   :<input type="text" name="user_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-
-	<input type="submit" value="Delete User Profile"/>
-</form>
+    <h1>CRUD operations for Entity1 </h1>
+    <br>
+	<a href="<c:url value='/jsps/exercise_injury/exercise_injury_create.jsp'/>" target="_parent">Create Exercise Injury</a> |&nbsp; 
+	<a href="<c:url value='/jsps/exercise_injury/exercise_injury_read.jsp'/>" target="_parent">Read Exercise Injury</a> |&nbsp;
+	<a href="<c:url value='/jsps/exercise_injury/exercise_injury_update.jsp'/>" target="_parent">Update Exercise Injury</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/exercise_injury/exercise_injury_delete.jsp'/>" target="_parent">Delete Exercise Injury</a>	
+	    
   </body>
 </html>
