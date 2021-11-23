@@ -259,7 +259,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('Frank','ysdhf84hnh','frankPaulsen@gmail.com'),('Joe','4367753!@#','myemail@gmail.com'),('John','myPassword45','joeJohnson@gmail.com'),('smith','password123','smith7@gmail.com'),('susan','susan123','susan@gmail.com');
+INSERT INTO `user` VALUES ('Frank','ysdhf84hnh','frankPaulsen@gmail.com'),('Joe','4367753!@#','myemail@gmail.com'),('John','myPassword45','joeJohnson@gmail.com'),('smith','password123','smith7@gmail.com'),('susan','susan123','susan@gmail.com'),('t','t','t');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -507,4 +507,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-13 17:24:54
+-- Dump completed on 2021-11-13 19:20:08
