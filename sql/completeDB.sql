@@ -259,8 +259,34 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('Frank','ysdhf84hnh','frankPaulsen@gmail.com'),('Joe','4367753!@#','myemail@gmail.com'),('John','myPassword45','joeJohnson@gmail.com'),('smith','password123','smith7@gmail.com'),('susan','susan123','susan@gmail.com'),('t','t','t');
+INSERT INTO `user` VALUES ('Frank','ysdhf84hnh','frankPaulsen@gmail.com'),('Joe','4367753!@#','myemail@gmail.com'),('John','myPassword45','joeJohnson@gmail.com'),('r','r','r'),('smith','password123','smith7@gmail.com'),('susan','susan123','susan@gmail.com'),('t','t','t');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_exercise`
+--
+
+DROP TABLE IF EXISTS `user_exercise`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_exercise` (
+  `user_id` int unsigned NOT NULL,
+  `exercise_id` int unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`exercise_id`),
+  KEY `exercise_id` (`exercise_id`),
+  CONSTRAINT `user_exercise_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user_profile` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_exercise_ibfk_2` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_exercise`
+--
+
+LOCK TABLES `user_exercise` WRITE;
+/*!40000 ALTER TABLE `user_exercise` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_exercise` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -507,4 +533,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-13 19:20:08
+-- Dump completed on 2021-11-23 18:25:32
