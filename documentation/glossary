@@ -1,0 +1,152 @@
+Entity: User
+  -Documentation name: user
+  -Synonyms: member, person
+  -Description: entity containing information on user's name and id
+  
+ Entity: User Login
+  -Documentation name: user_login
+  -Synonyms: email, password
+  
+Entity: Exercise
+   -Documentation name: exercise
+   -Synonyms: workout, lift
+   -Description: data regarding different types of exercise
+   
+Entity: Exercise Injury
+  -Documentation: exercise_injury
+  -Synonyms: injury, injuries, hurt
+  -Description: possible exercises that user can do to avoid aggravating their current injury
+  
+Entity: User Injury
+  -Documentation: user_injury
+  -Synonyms: injury, injuries, hurt
+  -Description: injury that user has or may have
+  
+Entity: Benefit
+  -Documentation: benefit
+  -Synonyms: heplful, beneficial, alternate
+  -Description: the benefit that user gains from related exercise
+
+Relationship: prevents
+  -one exercise is not done if zero or many exercise_injury exist
+  -zero or many exercise_injury prevents one exercise
+    
+Relationship: has
+  -one exercise has one or many benefit
+  -one or many benefits has one exercise
+  
+Relationship: holds
+  -one user holds zero or many user_injury
+  -zero or many user_injury holds one user
+  
+Relationship: includes
+  -one user includes one user_login
+  -one user_login includes one user
+  
+
+exercise ttributes:
+  PK exercise_id int NOT NULL 1-1(1)
+  name char(50) NOT NULL M-1 (1)
+  description char(1000) NOT NULL M-1 (1) 
+  
+exercise_injury attributes:
+  PK injury_id int NOT NULL 1-1 (1)
+  FK exercise_id NOT NULL M-1 (1)
+  name char(50) NOT NULL M-1 (1)
+  description char(50) NOT NULL M-1 (1)
+  
+user attributes:
+  PK user_id int NOT NULL 1-1 (1)
+  FK user_login_id int NOT NULL 1-1(1)
+  user_name char(50) NOT NULL M-1(1)
+  
+user_login attributes:
+  PK user_login_id int NOT NULL 1-1 (1)
+  email char(50) NOT NULL 1-1 (1)
+  password char(50) NOT NULL M-1 (1)
+
+user_injury attributes:
+  PK injury_id int NOT NULL 1-1 (1)
+  FK user_id M-1 (1)
+  name char(50) NOT NULL M-1(1)
+  description char(50) NOT NULL 1-1(0)
+  
+benefit attributes:
+  PK benfit_id int NOT NULL 1-1(1)
+  FK exercise_id int NOT NULL M-1(1)
+  name char(50) NOT NULL M-1(1)
+  description char(50) NOT NULL M-1(1)
+  
+Dependent Entities:
+
+  exercise_injury depends on exercise 
+      ON DELETE CASCADE
+  benefit depnds on exercise
+      ON DELETE CASCADE
+  user depends on user_login
+      ON DELETE CASCADE
+  user_injury depends on user
+      ON DELETE CASCADE
+  
+Super types, subtypes and partitions:
+NA
+
+FOREIGN KEY exercise_id (in exercise_injury)
+      ON DELETE CASCADE
+      
+FOREIGN KEY user_login_id     
+      ON DELETE CASCADE
+
+FOREIGN KEY exercise_id (in benefit)
+      ON DELETE CASCADE
+      
+FOREIGN KEY user_id (in benefit)
+      ON DELETE CASCADE
+      
+Attribute Type: exercise_id
+Data Type: int
+Description: gives an id number to each exercise
+
+Attribute Type: exercise_name
+Data Type: VARCHAR(50)
+Description: gives a name to the exercise
+
+Attribute Type: exercise_description
+Data Type: VARCHAR(1000)
+Description: provides a description of the exercise
+
+Attribute Type: exercise_injury_name
+Data Type: VARCHAR(50)
+Description: gives a name to each alternative exercise
+
+Attribute Type: exercise_injury_description
+Data Type: VARCHAR(1000)
+Description: provides a description to each alternate exercise
+
+Attribute Type: user_name
+Data Type: VARCHAR(50)
+Description: the user's username on the application
+
+Attribute Type: email
+Data Type: VARCHAR(50)
+Description: user's login information regarding email
+
+Attribute Type: password
+Data Type: VARCHAR(50)
+Description: user's login information regarding password
+
+Attribute Type: user_injury_name
+Data Type: VARCHAR(50)
+Description: the diagnosis of the user's injury
+
+Attribute Type: user_injury_description
+Data Type: VARCHAR(1000)
+Description: description of the user's specific injury
+
+Attribute Type: benefit_name
+Data Type: VARCHAR(50)
+Description: gives a name to the specific benefit the alternate injury provides
+
+Attribute Type: benefit_description
+Data Type: VARCHAR(1000)
+Description: description of the benefit the alternate injury provides
