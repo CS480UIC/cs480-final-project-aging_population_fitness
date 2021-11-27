@@ -22,18 +22,16 @@
   
   <body>
   <h1>Create Exercise</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Exercise ID    :<input type="text" name="exercise_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/ExerciseServletCreate'/>" method="post">
+	
+	Exercise Name	：<input type="text" name="exercise_name" value="${form.exercise_name }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_name }</span>
 	<br/>
-	Exercise Name	：<input type="text" name="exercise_name" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Exercise Description	：<input type="text" name="exercise_description" value="${form.exercise_description }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_description }</span>
 	<br/>
-	Exercise Description	：<input type="text" name="exercise_description" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Exercise Difficulty	：<input type="text" name="exercise_difficulty" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Exercise Difficulty	：<input type="text" name="exercise_difficulty" value="${form.exercise_difficulty }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_difficulty }</span>
 	<br/>
 	<input type="submit" value="Create Exercise"/>
 </form>

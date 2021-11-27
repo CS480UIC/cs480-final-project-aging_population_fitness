@@ -2,6 +2,7 @@
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>CS480 Demo</display-name>
+  
     <servlet>
     <description></description>
     <display-name>Entity1ServletCreate</display-name>
@@ -47,6 +48,53 @@
   <servlet-mapping>
     <servlet-name>Entity1ServletDelete</servlet-name>
     <url-pattern>/Entity1ServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ExerciseServletCreate</display-name>
+    <servlet-name>ExerciseServletCreate</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletCreate</servlet-name>
+    <url-pattern>/ExerciseServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ExerciseServletRead</display-name>
+    <servlet-name>ExerciseServletRead</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletRead</servlet-name>
+    <url-pattern>/ExerciseServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ExerciseServletUpdate</display-name>
+    <servlet-name>ExerciseServletUpdate</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletUpdate</servlet-name>
+    <url-pattern>/ExerciseServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ExerciseServletDelete</display-name>
+    <servlet-name>ExerciseServletDelete</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletDelete</servlet-name>
+    <url-pattern>/ExerciseServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>

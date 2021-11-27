@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete Exercise</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/ExerciseServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Exercise ID    :<input type="text" name="exercise_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Exercise ID    :<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
 
 	<input type="submit" value="Delete Exercise"/>

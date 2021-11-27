@@ -22,20 +22,12 @@
   
   <body>
   <h1>Update Exercise</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/ExerciseServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Exercise ID    :<input type="text" name="exercise_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Exercise Name	：<input type="text" name="exercise_name" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Exercise Description	：<input type="text" name="exercise_description" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Exercise Difficulty	：<input type="text" name="exercise_difficulty" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
+	
 
 	<input type="submit" value="Update Exercise"/>
 </form>

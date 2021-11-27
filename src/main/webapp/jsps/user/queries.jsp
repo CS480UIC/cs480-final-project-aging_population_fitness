@@ -25,6 +25,8 @@
     <h1>Welcome to the Demo</h1>
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findAll'/>" target="body">Average user injury severity greater than three</a>&nbsp;&nbsp;
  
     
   </body>
