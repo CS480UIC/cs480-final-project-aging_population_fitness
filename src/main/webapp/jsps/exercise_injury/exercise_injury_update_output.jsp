@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Exercise Injury</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,33 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Exercise Injury</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	Injury ID    :<input type="text" name="injury_id" value="${exercise_injury.getInjuryID() }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
+	Exercise ID    :<input type="text" name="exercise_id" value="${exercise_injury.getExerciseID() }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	Exercise Name	：<input type="text" name="exercise_injury_name" value="${exercise_injury.getExerciseInjuryName() }" disabled />
+	<br/>
+	Exercise Description	：<input type="text" name="exercise_injury_description" value="${exercise_injury.getExerciseInjuryDescription() }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Exercise_injuryServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="injury_id" value="${exercise_injury.getInjuryID() }"/>
+
+	Exercise ID：<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Exercise Injury Name：<input type="text" name="exercise_injury_name" value="${form.exercise_injury_name }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_injury_name }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Exercise Injury Description	：<input type="text" name="exercise_injury_description" value="${form.exercise_injury_description }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_injury_description }</span>
+	<br/>
+	<input type="submit" value="Update Exercise Injury"/>
 </form>
 
 </body>

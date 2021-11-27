@@ -99,6 +99,53 @@
   
   <servlet>
     <description></description>
+    <display-name>Exercise_injuryServletCreate</display-name>
+    <servlet-name>Exercise_injuryServletCreate</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletCreate</servlet-name>
+    <url-pattern>/Exercise_injuryServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletRead</display-name>
+    <servlet-name>Exercise_injuryServletRead</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletRead</servlet-name>
+    <url-pattern>/Exercise_injuryServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletUpdate</display-name>
+    <servlet-name>Exercise_injuryServletUpdate</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletUpdate</servlet-name>
+    <url-pattern>/Exercise_injuryServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletDelete</display-name>
+    <servlet-name>Exercise_injuryServletDelete</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletDelete</servlet-name>
+    <url-pattern>/Exercise_injuryServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>UserServletRegister</display-name>
     <servlet-name>UserServletRegister</servlet-name>
     <servlet-class>user.web.servlet.UserServletRegister</servlet-class>

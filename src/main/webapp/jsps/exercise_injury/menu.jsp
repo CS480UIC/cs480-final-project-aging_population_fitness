@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Entity1 </h1>
+    <h1>CRUD operations for Exercise Injury </h1>
     <br>
 	<a href="<c:url value='/jsps/exercise_injury/exercise_injury_create.jsp'/>" target="_parent">Create Exercise Injury</a> |&nbsp; 
 	<a href="<c:url value='/jsps/exercise_injury/exercise_injury_read.jsp'/>" target="_parent">Read Exercise Injury</a> |&nbsp;

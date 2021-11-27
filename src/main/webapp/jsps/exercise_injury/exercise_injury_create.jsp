@@ -22,18 +22,16 @@
   
   <body>
   <h1>Create Exercise Injury</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Injury ID    :<input type="text" name="injury_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/Exercise_injuryServletCreate'/>" method="post">
+	
+	Exercise ID	：<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
-	Exercise ID	：<input type="text" name="exercise_id" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Exercise Injury Name	：<input type="text" name="exercise_injury_name" value="${form.exercise_injury_name }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_injury_name }</span>
 	<br/>
-	Exercise Injury Name	：<input type="text" name="exercise_injury_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Exercise Injury Description	：<input type="text" name="exercise_injury_description" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Exercise Injury Description	：<input type="text" name="exercise_injury_description" value="${form.exercise_injury_description }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_injury_description }</span>
 	<br/>
 	<input type="submit" value="Create Exercise Injury"/>
 </form>
