@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Exercise Injury Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,16 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Exercise Injury Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	Injury ID    :<input type="text" name="injury_id" value="${exercise_injury.getInjuryID() }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Exercise ID：<input type="text" name="exercise_id" value="${exercise_injury.getExerciseID()}" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Exercise Injury Name	：<input type="text" name="exercise_injury_name" value="${exercise_injury.getExerciseInjuryName() }" disabled/>
+	<br/>
+	Exercise Injury Description	：<input type="text" name="exercise_injury_description" value="${exercise_injury.getExerciseInjuryDescription() }" disabled/>
 	<br/>
 </form>
 

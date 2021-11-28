@@ -49,7 +49,7 @@
 			<a href="<c:url value='/jsps/user_injury/menu.jsp'/>" target="body">CRUD User Injury</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/benefit/menu.jsp'/>" target="body">CRUD Benefit</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/exercise/menu.jsp'/>" target="body">CRUD Exercise</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/exerise_injury/menu.jsp'/>" target="body">CRUD Exercise Injury</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/exercise_injury/menu.jsp'/>" target="body">CRUD Exercise Injury</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>

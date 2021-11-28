@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Exercise Injury</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Exercise Injury</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Exercise_injuryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="injury_id" value="${exercise_injury.getInjuryID() }"/>
+	Injury ID    :<input type="text" name="injury_id" value="${exercise_injury.getInjuryID() }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Exercise ID：<input type="text" name="exercise_id" value="${exercise_injury.getExerciseID()}" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Exercise Injury Name	：<input type="text" name="exercise_injury_name" value="${exercise_injury.getExerciseInjuryName() }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	Exercise Injury Description	：<input type="text" name="exercise_injury_description" value="${exercise_injury.getExerciseInjuryDescription() }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Exercise Injury"/>
 </form>
 
 </body>

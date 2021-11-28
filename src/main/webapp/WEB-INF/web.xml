@@ -2,6 +2,7 @@
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>CS480 Demo</display-name>
+  
     <servlet>
     <description></description>
     <display-name>Entity1ServletCreate</display-name>
@@ -47,6 +48,147 @@
   <servlet-mapping>
     <servlet-name>Entity1ServletDelete</servlet-name>
     <url-pattern>/Entity1ServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ExerciseServletCreate</display-name>
+    <servlet-name>ExerciseServletCreate</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletCreate</servlet-name>
+    <url-pattern>/ExerciseServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ExerciseServletRead</display-name>
+    <servlet-name>ExerciseServletRead</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletRead</servlet-name>
+    <url-pattern>/ExerciseServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ExerciseServletUpdate</display-name>
+    <servlet-name>ExerciseServletUpdate</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletUpdate</servlet-name>
+    <url-pattern>/ExerciseServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ExerciseServletDelete</display-name>
+    <servlet-name>ExerciseServletDelete</servlet-name>
+    <servlet-class>exercise.web.servlet.ExerciseServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServletDelete</servlet-name>
+    <url-pattern>/ExerciseServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletCreate</display-name>
+    <servlet-name>Exercise_injuryServletCreate</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletCreate</servlet-name>
+    <url-pattern>/Exercise_injuryServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletRead</display-name>
+    <servlet-name>Exercise_injuryServletRead</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletRead</servlet-name>
+    <url-pattern>/Exercise_injuryServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletUpdate</display-name>
+    <servlet-name>Exercise_injuryServletUpdate</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletUpdate</servlet-name>
+    <url-pattern>/Exercise_injuryServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Exercise_injuryServletDelete</display-name>
+    <servlet-name>Exercise_injuryServletDelete</servlet-name>
+    <servlet-class>exercise_injury.web.servlet.Exercise_injuryServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercise_injuryServletDelete</servlet-name>
+    <url-pattern>/Exercise_injuryServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BenefitServletCreate</display-name>
+    <servlet-name>BenefitServletCreate</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletCreate</servlet-name>
+    <url-pattern>/BenefitServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BenefitServletRead</display-name>
+    <servlet-name>BenefitServletRead</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletRead</servlet-name>
+    <url-pattern>/BenefitServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>BenefitServletUpdate</display-name>
+    <servlet-name>BenefitServletUpdate</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletUpdate</servlet-name>
+    <url-pattern>/BenefitServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>BenefitServletDelete</display-name>
+    <servlet-name>BenefitServletDelete</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletDelete</servlet-name>
+    <url-pattern>/BenefitServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Benefit</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Benefit</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/BenefitServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="benefit_id" value="${benefit.getBenefitID() }"/>
+	Benefit ID    :<input type="text" name="benefit_id" value="${benefit.getBenefitID() }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Exercise ID    :<input type="text" name="exercise_id" value="${benefit.getExerciseID() }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Benefit Name：<input type="text" name="benefit_name" value="${benefit.getBenefitName() }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	Benefit Description	：<input type="text" name="benefit_description" value="${benefit.getBenefitDescription() }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Benefit"/>
 </form>
 
 </body>

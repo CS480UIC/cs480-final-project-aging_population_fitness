@@ -22,18 +22,16 @@
   
   <body>
   <h1>Create Benefit</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Benefit ID    :<input type="text" name="benefit_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/BenefitServletCreate'/>" method="post">
+	
+	Exercise ID：<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
-	Exercise ID：<input type="text" name="exercise_id" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Benefit Name	：<input type="text" name="benefit_name" value="${form.benefit_name }"/>
+	<span style="color: red; font-weight: 900">${errors.benefit_name }</span>
 	<br/>
-	Benefit Name	：<input type="text" name="benefit_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Benefit Description	：<input type="text" name="benefit_description" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Benefit Description	：<input type="text" name="benefit_description" value="${form.benefit_description }"/>
+	<span style="color: red; font-weight: 900">${errors.benefit_description }</span>
 	<br/>
 	<input type="submit" value="Create Benefit"/>
 </form>

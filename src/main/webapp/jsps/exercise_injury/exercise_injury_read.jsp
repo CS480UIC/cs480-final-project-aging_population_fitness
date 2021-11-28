@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity1</title>
+    <title>Read Exercise Injury</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,12 +21,12 @@
   </head>
   
   <body>
-  <h1>Read Entity1</h1>
+  <h1>Read Exercise Injury</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/Exercise_injuryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Read User    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Read Injury ID    :<input type="text" name="injury_id" value="${form.injury_id }"/>
+	<span style="color: red; font-weight: 900">${errors.injury_id }</span>
 	<br/>
 
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
@@ -35,7 +35,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read Entity1"/>
+	<input type="submit" value="Read Exercise Injury"/>
 </form>
   </body>
 </html>
