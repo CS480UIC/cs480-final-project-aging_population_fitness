@@ -1,6 +1,6 @@
 package user_profile.service;
 
-public class User_profieException extends Exception {
+public class User_profileException extends Exception {
 
 	/**
 	 * 

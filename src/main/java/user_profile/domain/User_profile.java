@@ -23,7 +23,7 @@ public class User_profile {
 		this.user_id = user_id;
 	}
 	
-	public String getUsername() {
+	public String getUserName() {
 		return username;
 	}
 
