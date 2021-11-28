@@ -16,14 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Temporary view structure for view `average_user_injury_severity_greater_than_five`
+-- Temporary view structure for view `average_user_injury_severity_greater_than_three`
 --
 
-DROP TABLE IF EXISTS `average_user_injury_severity_greater_than_five`;
-/*!50001 DROP VIEW IF EXISTS `average_user_injury_severity_greater_than_five`*/;
+DROP TABLE IF EXISTS `average_user_injury_severity_greater_than_three`;
+/*!50001 DROP VIEW IF EXISTS `average_user_injury_severity_greater_than_three`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
-/*!50001 CREATE VIEW `average_user_injury_severity_greater_than_five` AS SELECT 
+/*!50001 CREATE VIEW `average_user_injury_severity_greater_than_three` AS SELECT 
  1 AS `user_id`,
  1 AS `ROUND( AVG( user_injury_severity) )`*/;
 SET character_set_client = @saved_cs_client;
@@ -42,8 +42,9 @@ CREATE TABLE `benefit` (
   `benefit_description` varchar(1000) NOT NULL,
   PRIMARY KEY (`benefit_id`),
   KEY `exercise_id` (`exercise_id`),
+  KEY `benefit_name_index` (`benefit_name`),
   CONSTRAINT `benefit_ibfk_1` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,6 +108,7 @@ CREATE TABLE `entity1` (
 
 LOCK TABLES `entity1` WRITE;
 /*!40000 ALTER TABLE `entity1` DISABLE KEYS */;
+INSERT INTO `entity1` VALUES ('test','test','test');
 /*!40000 ALTER TABLE `entity1` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -124,8 +126,9 @@ CREATE TABLE `exercise` (
   `exercise_difficulty` smallint unsigned NOT NULL,
   PRIMARY KEY (`exercise_id`),
   UNIQUE KEY `exercise_name` (`exercise_name`),
+  KEY `exercise_difficulty_index` (`exercise_difficulty`),
   CONSTRAINT `exercise_chk_1` CHECK (((`exercise_difficulty` > 0) and (`exercise_difficulty` < 11)))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -166,8 +169,9 @@ CREATE TABLE `exercise_injury` (
   `exercise_injury_description` varchar(1000) NOT NULL,
   PRIMARY KEY (`injury_id`),
   KEY `exercise_id` (`exercise_id`),
+  KEY `exercise_injury_name_index` (`exercise_injury_name`),
   CONSTRAINT `exercise_injury_ibfk_1` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -176,7 +180,7 @@ CREATE TABLE `exercise_injury` (
 
 LOCK TABLES `exercise_injury` WRITE;
 /*!40000 ALTER TABLE `exercise_injury` DISABLE KEYS */;
-INSERT INTO `exercise_injury` VALUES (1,1,'strained pectoral','chest injury'),(2,2,'calf strain','strain on leg muscle'),(3,3,'sprained ankle','sprain of foot bone'),(4,4,'finger sprain','sprain on the finger'),(5,5,'lower back pain','trouble standing or bending the back with pain in the lower region of the back');
+INSERT INTO `exercise_injury` VALUES (1,1,'strained pectoral','chest injury'),(2,2,'calf strain','strain on leg muscle'),(3,3,'sprained ankle','sprain of foot bone'),(4,4,'finger sprain','sprain on the finger'),(5,4,'my knee hurts','my knee hurts');
 /*!40000 ALTER TABLE `exercise_injury` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,7 +263,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('Frank','ysdhf84hnh','frankPaulsen@gmail.com'),('Joe','4367753!@#','myemail@gmail.com'),('John','myPassword45','joeJohnson@gmail.com'),('r','r','r'),('smith','password123','smith7@gmail.com'),('susan','susan123','susan@gmail.com'),('t','t','t');
+INSERT INTO `user` VALUES ('Frank','ysdhf84hnh','frankPaulsen@gmail.com'),('j','j','j'),('Joe','4367753!@#','myemail@gmail.com'),('John','myPassword45','joeJohnson@gmail.com'),('r','r','r'),('smith','password123','smith7@gmail.com'),('susan','susan123','susan@gmail.com'),('t','t','t');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,10 +367,10 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
--- Final view structure for view `average_user_injury_severity_greater_than_five`
+-- Final view structure for view `average_user_injury_severity_greater_than_three`
 --
 
-/*!50001 DROP VIEW IF EXISTS `average_user_injury_severity_greater_than_five`*/;
+/*!50001 DROP VIEW IF EXISTS `average_user_injury_severity_greater_than_three`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -375,7 +379,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `average_user_injury_severity_greater_than_five` AS select `user_injury`.`user_id` AS `user_id`,round(avg(`user_injury`.`user_injury_severity`),0) AS `ROUND( AVG( user_injury_severity) )` from `user_injury` group by `user_injury`.`user_id` having (round(avg(`user_injury`.`user_injury_severity`),0) > 3) */;
+/*!50001 VIEW `average_user_injury_severity_greater_than_three` AS select `user_injury`.`user_id` AS `user_id`,round(avg(`user_injury`.`user_injury_severity`),0) AS `ROUND( AVG( user_injury_severity) )` from `user_injury` group by `user_injury`.`user_id` having (round(avg(`user_injury`.`user_injury_severity`),0) > 3) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -533,4 +537,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-23 18:25:32
+-- Dump completed on 2021-11-28 14:50:50
