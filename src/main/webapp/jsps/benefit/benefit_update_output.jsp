@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Benefit</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,32 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Benefit</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	Benefit ID    :<input type="text" name="benefit_id" value="${benefit.getBenefitID() }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
+	Exercise ID    :<input type="text" name="exercise_id" value="${benefit.getExerciseID() }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	Benefit Name：<input type="text" name="benefit_name" value="${benefit.getBenefitName() }" disabled/>
+	<br/>
+	Benefit Description	：<input type="text" name="benefit_description" value="${benefit.getBenefitDescription() }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/BenefitServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="benefit_id" value="${benefit.getBenefitID() }"/>
+	Exercise ID：<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Benefit Name：<input type="text" name="benefit_name" value="${form.benefit_name }"/>
+	<span style="color: red; font-weight: 900">${errors.benefit_name }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Benefit Description	：<input type="text" name="benefit_description" value="${form.benefit_description }"/>
+	<span style="color: red; font-weight: 900">${errors.benefit_description }</span>
+	<br/>
+	<input type="submit" value="Update Benefit"/>
 </form>
 
 </body>

@@ -146,6 +146,53 @@
   
   <servlet>
     <description></description>
+    <display-name>BenefitServletCreate</display-name>
+    <servlet-name>BenefitServletCreate</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletCreate</servlet-name>
+    <url-pattern>/BenefitServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BenefitServletRead</display-name>
+    <servlet-name>BenefitServletRead</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletRead</servlet-name>
+    <url-pattern>/BenefitServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>BenefitServletUpdate</display-name>
+    <servlet-name>BenefitServletUpdate</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletUpdate</servlet-name>
+    <url-pattern>/BenefitServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>BenefitServletDelete</display-name>
+    <servlet-name>BenefitServletDelete</servlet-name>
+    <servlet-class>benefit.web.servlet.BenefitServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BenefitServletDelete</servlet-name>
+    <url-pattern>/BenefitServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>UserServletRegister</display-name>
     <servlet-name>UserServletRegister</servlet-name>
     <servlet-class>user.web.servlet.UserServletRegister</servlet-class>

@@ -23,10 +23,10 @@
   <body>
   <h1>Read Benefit</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/BenefitServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Read Benefit ID    :<input type="text" name="benefit_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Read Benefit ID    :<input type="text" name="benefit_id" value="${form.benefit_id }"/>
+	<span style="color: red; font-weight: 900">${errors.benefit_id }</span>
 	<br/>
 
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
