@@ -1,4 +1,4 @@
-package exercise.dao;
+package user_profile.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,17 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import entity1.domain.Entity1;
-
 //import java.util.ArrayList;
 //import java.util.List;
 
-import exercise.domain.Exercise;
+import user_profile.domain.User_profile;
 
 /**
  * DDL functions performed in database
  */
-public class ExerciseDao {
+public class User_profileDao {
 	
 	/**
 	 * user name to connect to the database 
@@ -28,53 +26,51 @@ public class ExerciseDao {
 	 */
 	private String MySQL_password = "1234"; //TODO change password
 
-	public Exercise findByExerciseID(String exercise_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Exercise exercise = new Exercise();
+	public User_profile findByUserID(String user_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		User_profile user_profile = new User_profile();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
-		    String sql = "select * from exercise where exercise_id=?";
+		    String sql = "select * from user_profile where user_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,exercise_id);
+		    preparestatement.setString(1,user_id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String exerciseID = resultSet.getString("exercise_id");
-		    	System.out.println(exercise_id);		//testing line
-		    	System.out.println(exerciseID);		//testing line
-		    	if(exerciseID.equals(exercise_id)){
+		    	String userID = resultSet.getString("user_id");
+		    	System.out.println(user_id);		//testing line
+		    	System.out.println(userID);		//testing line
+		    	if(userID.equals(user_id)){
 		    		System.out.println("theyre equal");
-		    		exercise.setExerciseID(resultSet.getString("exercise_id"));
-		    		exercise.setExerciseName(resultSet.getString("exercise_name"));
-		    		exercise.setExerciseDescription(resultSet.getString("exercise_description"));
-		    		exercise.setExerciseDifficulty(resultSet.getString("exercise_difficulty"));		
+		    		user_profile.setUserID(resultSet.getString("user_id"));
+		    		user_profile.setUserName(resultSet.getString("username"));
+		    		user_profile.setProfileName(resultSet.getString("profile_name"));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return exercise;
+		return user_profile;
 	}	
 	
 	/**
-	 * insert Exercise
+	 * insert User_profile
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Exercise form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(User_profile form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "insert into exercise (exercise_name, exercise_description, exercise_difficulty) values(?,?,?)";
+			String sql = "insert into user_profile (username, user_profile) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getExerciseName());
-		    preparestatement.setString(2,form.getExerciseDescription());
-		    preparestatement.setString(3,form.getExerciseDifficulty());
+		    preparestatement.setString(1,form.getUserName());
+		    preparestatement.setString(2,form.getUserProfile());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -89,17 +85,16 @@ public class ExerciseDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Exercise form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(User_profile form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE exercise SET exercise_name = ?, exercise_description = ?, exercise_difficulty = ? where exercise_id = ?;";
+			String sql = "UPDATE user_profile SET username = ?, user_profile = ? where user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getExerciseName());
-			preparestatement.setString(2,form.getExerciseDescription());
-		    preparestatement.setString(3,form.getExerciseDifficulty());
-		    preparestatement.setString(4,form.getExerciseID());
+		    preparestatement.setString(1,form.getUserName());
+			preparestatement.setString(2,form.getUserProfile());
+		    preparestatement.setString(3,form.getUserID());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -114,16 +109,16 @@ public class ExerciseDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String exercise_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String user_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "delete from exercise where exercise_id = ?";
+			String sql = "delete from user_profile where user_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1, exercise_id);
+		    preparestatement.setString(1, user_id);
 		    System.out.print( "id to delete: ");
-		    System.out.println( exercise_id);
+		    System.out.println( user_id);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
