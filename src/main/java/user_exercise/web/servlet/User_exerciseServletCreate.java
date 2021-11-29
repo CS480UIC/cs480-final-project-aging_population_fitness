@@ -1,4 +1,4 @@
-package user_profile.web.servlet;
+package user_exercise.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user_profile.domain.User_profile;
-import user_profile.service.User_profileException;
-import user_profile.service.User_profileService;
+import user_exercise.domain.User_exercise;
+import user_exercise.service.User_exerciseException;
+import user_exercise.service.User_exerciseService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class User_profileServletCreate extends HttpServlet {
+public class User_exerciseServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public User_profileServletCreate() {
+    public User_exerciseServletCreate() {
         super();
     }
 
@@ -41,23 +41,22 @@ public class User_profileServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User_profileService user_profileservice = new User_profileService();
+		User_exerciseService user_exerciseservice = new User_exerciseService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		User_profile form = new User_profile();
+		User_exercise form = new User_exercise();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUserName(info.get(0)); // previously setExerciseName 0
-		form.setProfileName(info.get(1));	// setExerciseDescription 1
-											// deleted ExerciseDifficulty 2
+		form.setUserID(info.get(0));
+		form.setExerciseID(info.get(1));
 		try {
-			user_profileservice.create(form);
+			user_exerciseservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | User_profileException e) {
+		} catch (ClassNotFoundException | User_exerciseException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();
