@@ -41,7 +41,7 @@ public class User_injuryServletRead extends HttpServlet {
 		User_injuryDao user_injuryDao = new User_injuryDao();
 		
 		try {
-			user_injury = user_injuryDao.findByUserID(request.getParameter("user_id")); /* here */
+			user_injury = user_injuryDao.findByInjuryID(request.getParameter("injury_id")); /* here */
 			System.out.println(user_injury);
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
@@ -51,7 +51,7 @@ public class User_injuryServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(user_injury.getUserID()!=null){ /* here */
+		if(user_injury.getInjuryID()!=null){ /* here */
 					System.out.println(user_injury);
 					request.setAttribute("user injury", user_injury);
 					request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
