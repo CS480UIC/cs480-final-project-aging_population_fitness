@@ -251,6 +251,18 @@
   
   <servlet>
     <description></description>
+    <display-name>findDifficultyGreaterThanFive</display-name>
+    <servlet-name>findDifficultyGreaterThanFive</servlet-name>
+    
+    <servlet-class>user.web.servlet.findDifficultyGreaterThanFive</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findDifficultyGreaterThanFive</servlet-name>
+    <url-pattern>/findDifficultyGreaterThanFive</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>findSeverityGreaterThanThree</display-name>
     <servlet-name>findSeverityGreaterThanThree</servlet-name>
     

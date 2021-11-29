@@ -12,6 +12,7 @@ public class Table {
 	private String col1;
 	private String col2; 
 	private String col3;
+	private String col4;
 	
 
 	
@@ -37,6 +38,14 @@ public class Table {
 
 	public void setCol3(String colThree) {
 		this.col3 = colThree;
+	}
+	
+	public String getCol4() {
+		return col4;
+	}
+
+	public void setCol4(String colFour) {
+		this.col4 = colFour;
 	}
 
 	

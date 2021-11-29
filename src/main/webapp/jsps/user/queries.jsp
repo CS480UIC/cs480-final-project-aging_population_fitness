@@ -27,7 +27,8 @@
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Average user injury severity greater than three</a>&nbsp;&nbsp;
- 
+ 	<br>
+    <a href="<c:url value='/findDifficultyGreaterThanFive'/>" target="body">Simple Query: Difficulty Greater than 5</a>&nbsp;&nbsp;
     
   </body>
 </html>
