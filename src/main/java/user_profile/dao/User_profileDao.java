@@ -70,7 +70,7 @@ public class User_profileDao {
 			String sql = "insert into user_profile (username, user_profile) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getUserName());
-		    preparestatement.setString(2,form.getUserProfile());
+		    preparestatement.setString(2,form.getProfileName());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -93,7 +93,7 @@ public class User_profileDao {
 			String sql = "UPDATE user_profile SET username = ?, user_profile = ? where user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getUserName());
-			preparestatement.setString(2,form.getUserProfile());
+			preparestatement.setString(2,form.getProfileName());
 		    preparestatement.setString(3,form.getUserID());
 		    preparestatement.executeUpdate();
 		    connect.close();

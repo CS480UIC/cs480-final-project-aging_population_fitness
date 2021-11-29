@@ -44,7 +44,7 @@ public class User_injuryDao {
 		    		System.out.println("theyre equal");
 		    		user_injury.setUserID(resultSet.getString("user_id"));
 		    		user_injury.setUserName(resultSet.getString("username"));
-		    		user_injury.setinjuryName(resultSet.getString("injury_name"));
+		    		user_injury.setInjuryName(resultSet.getString("injury_name"));
 		    	}
 		    }
 		    connect.close();

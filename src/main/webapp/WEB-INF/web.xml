@@ -101,7 +101,7 @@
     <description></description>
     <display-name>User_injuryServletCreate</display-name>
     <servlet-name>User_injuryServletCreate</servlet-name>
-    <servlet-class>user_injury.web.servlet.User_profileServletCreate</servlet-class>
+    <servlet-class>user_injury.web.servlet.User_injuryServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>User_injuryServletCreate</servlet-name>
@@ -341,6 +341,18 @@
   <servlet-mapping>
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findDifficultyGreaterThanFive</display-name>
+    <servlet-name>findDifficultyGreaterThanFive</servlet-name>
+    
+    <servlet-class>user.web.servlet.findDifficultyGreaterThanFive</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findDifficultyGreaterThanFive</servlet-name>
+    <url-pattern>/findDifficultyGreaterThanFive</url-pattern>
   </servlet-mapping>
   
   <servlet>
