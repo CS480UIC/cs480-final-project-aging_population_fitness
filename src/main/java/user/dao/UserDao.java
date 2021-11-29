@@ -152,7 +152,7 @@ public class UserDao {
 		
 	}
 	
-	public List<Object> findDifficultyGreaterThanFive() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+	public List<Object> findSeverityGreaterThanFive() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
