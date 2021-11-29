@@ -13,7 +13,6 @@ public class User_exercise {
 	
 	private String user_id;
 	private String exercise_id;
-	// more ??
 	
 	public String getUserID() {
 		return user_id;
@@ -30,7 +29,6 @@ public class User_exercise {
 	public void setExerciseID(String exercise_id) {
 		this.exercise_id = exercise_id;
 	}
-}
 
 	@Override
 	public String toString() {

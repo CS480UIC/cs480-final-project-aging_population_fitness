@@ -13,6 +13,9 @@ public class Table {
 	private String col2; 
 	private String col3;
 	private String col4;
+	private String col5;
+	private String col6;
+	
 	
 
 	
@@ -47,6 +50,22 @@ public class Table {
 	public void setCol4(String colFour) {
 		this.col4 = colFour;
 	}
+	
+	public String getCol5() {
+		return col5;
+	}
+
+	public void setCol5(String colFive) {
+		this.col5 = colFive;
+	}
+	
+	public String getCol6() {
+		return col6;
+	}
+
+	public void setCol6(String colSix) {
+		this.col6 = colSix;
+	}
 
 	
 
@@ -54,6 +73,7 @@ public class Table {
 	@Override
 	public String toString() {
 		return "Table [ col1=" + col1 + ", col2="
-				+ col2 + ", col3=" + col3 +"]";
+				+ col2 + ", col3=" + col3 + ", col4=" + 
+				col4+ ", col5=" + col5+ ", col6=" + col6 + "]";
 	}
 }

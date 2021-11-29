@@ -151,5 +151,31 @@ public class UserDao {
 		return list;
 		
 	}
+	
+	public List<Object> findSeverityGreaterThanFive() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
+			String sql = "SELECT * FROM injury_greater_than_five";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Table table = new Table();
+				table.setCol1(resultSet.getString("injury_id"));
+				table.setCol2(resultSet.getString("user_id"));
+				table.setCol3(resultSet.getString("user_injury_name"));
+				table.setCol4(resultSet.getString("user_injury_description"));
+				table.setCol5(resultSet.getString("user_injury_severity"));
+				table.setCol6(resultSet.getString("user_injury_date"));
+	    		list.add(table);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 		
 }

@@ -41,7 +41,7 @@ public class User_injuryServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				user_injury = user_injuryDao.findByUserID(request.getParameter("user_id")); /* here */
+				user_injury = user_injuryDao.findByInjuryID(request.getParameter("injury_id")); /* here */
 				
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -51,7 +51,7 @@ public class User_injuryServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(user_injury.getUserID()!=null){ /* here */
+			if(user_injury.getInjuryID()!=null){ /* here */
 						System.out.println(user_injury);
 						request.setAttribute("user injury", user_injury);
 						request.getRequestDispatcher("/jsps/user_injury/user_injury_delete_output.jsp").forward(request, response);			
@@ -64,9 +64,9 @@ public class User_injuryServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
-				System.out.print("user_id before delete call: "); /* here */
+				System.out.print("injury_id before delete call: "); /* here */
 				System.out.println(user_injury);	//test line
-				user_injuryDao.delete(request.getParameter("user_id"));
+				user_injuryDao.delete(request.getParameter("injury_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

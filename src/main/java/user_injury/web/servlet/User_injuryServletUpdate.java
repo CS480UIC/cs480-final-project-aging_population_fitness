@@ -47,7 +47,7 @@ public class User_injuryServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				user_injury = user_injurydao.findByUserID(request.getParameter("user_id")); /* here */
+				user_injury = user_injurydao.findByInjuryID(request.getParameter("injury_id")); /* here */
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,8 +56,8 @@ public class User_injuryServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(user_injury.getUserID()!=null){ /* here */
-				request.setAttribute("user id", user_injury);
+			if(user_injury.getInjuryID()!=null){ /* here */
+				request.setAttribute("injury_id", user_injury);
 				request.getRequestDispatcher("/jsps/user_injury/user_injury_update_output.jsp").forward(request, response);
 
 			}
@@ -79,9 +79,12 @@ public class User_injuryServletUpdate extends HttpServlet {
 			}
 			
 			/* here */
-			form.setUserName(info.get(2));
-			form.setinjuryName(info.get(3));
-			form.setUserID(request.getParameter("user_id"));
+			form.setUserID(info.get(2));
+			form.setUserInjuryName(info.get(3));
+			form.setUserInjuryDescription(info.get(4));
+			form.setUserInjurySeverity(info.get(5));
+			form.setUserInjuryDate(info.get(6));
+			form.setUserID(request.getParameter("injury_id"));
 
 			try {
 				user_injurydao.update(form);

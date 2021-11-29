@@ -1,4 +1,4 @@
-package user_profile.web.servlet;
+package user_exercise.web.servlet;
 
 import java.io.IOException;
 
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user_profile.dao.User_profileDao;
-import user_profile.domain.User_profile;
+import user_exercise.dao.User_exerciseDao;
+import user_exercise.domain.User_exercise;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class User_profileServletRead extends HttpServlet {
+public class User_exerciseServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public User_profileServletRead() {
+    public User_exerciseServletRead() {
         super();
     }
     
@@ -37,12 +37,12 @@ public class User_profileServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User_profile user_profile = null;
-		User_profileDao user_profileDao = new User_profileDao();
+		User_exercise user_exercise = null;
+		User_exerciseDao user_exerciseDao = new User_exerciseDao();
 		
 		try {
-			user_profile = user_profileDao.findByUserID(request.getParameter("user_id"));
-			System.out.println(user_profile);
+			user_exercise = user_exerciseDao.findByUserIDExerciseID(request.getParameter("user_id"), request.getParameter("exercise_id"));
+			System.out.println(user_exercise);
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -51,14 +51,14 @@ public class User_profileServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(user_profile.getUserID()!=null){
-					System.out.println(user_profile);
-					request.setAttribute("user profile", user_profile);
-					request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
+		if(user_exercise.getUserID()!=null && user_exercise.getExerciseID()!=null){
+					System.out.println(user_exercise);
+					request.setAttribute("user exercise", user_exercise);
+					request.getRequestDispatcher("/jsps/user_exercise/user_exercise_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "User profile not found");
-			request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "User exercise not found");
+			request.getRequestDispatcher("/jsps/user_exercise/user_exercise_read_output.jsp").forward(request, response);
 		}
 	}
 }
