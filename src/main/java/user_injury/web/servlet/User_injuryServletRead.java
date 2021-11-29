@@ -1,4 +1,4 @@
-package user_profile.web.servlet;
+package user_injury.web.servlet;
 
 import java.io.IOException;
 
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user_profile.dao.User_profileDao;
-import user_profile.domain.User_profile;
+import user_injury.dao.User_injuryDao;
+import user_injury.domain.User_injury;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class User_profileServletRead extends HttpServlet {
+public class User_injuryServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public User_profileServletRead() {
+    public User_injuryServletRead() {
         super();
     }
     
@@ -37,12 +37,12 @@ public class User_profileServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User_profile user_profile = null;
-		User_profileDao user_profileDao = new User_profileDao();
+		User_injury user_injury = null;
+		User_injuryDao user_injuryDao = new User_injuryDao();
 		
 		try {
-			user_profile = user_profileDao.findByUserID(request.getParameter("user_id"));
-			System.out.println(user_profile);
+			user_injury = user_injuryDao.findByUserID(request.getParameter("user_id")); /* here */
+			System.out.println(user_injury);
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -51,14 +51,14 @@ public class User_profileServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(user_profile.getUserID()!=null){
-					System.out.println(user_profile);
-					request.setAttribute("user profile", user_profile);
-					request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
+		if(user_injury.getUserID()!=null){ /* here */
+					System.out.println(user_injury);
+					request.setAttribute("user injury", user_injury);
+					request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "User profile not found");
-			request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "User injury not found");
+			request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 		}
 	}
 }
