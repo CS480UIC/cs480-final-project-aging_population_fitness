@@ -29,6 +29,8 @@
     <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Average user injury severity greater than three</a>&nbsp;&nbsp;
  	<br>
     <a href="<c:url value='/findDifficultyGreaterThanFive'/>" target="body">Simple Query: Difficulty Greater than 5</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findSeverityGreaterThanFive'/>" target="body">Simple Query: User injury severity greater than 5</a>&nbsp;&nbsp;
     
   </body>
 </html>

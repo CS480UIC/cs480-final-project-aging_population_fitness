@@ -52,4 +52,9 @@ public class UserService {
 		return userDao.findSeverityGreaterThanThree();
 		
 	}
+	
+	public List<Object> findSeverityGreaterThanFive() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return userDao.findSeverityGreaterThanFive();
+		
+	}
 }

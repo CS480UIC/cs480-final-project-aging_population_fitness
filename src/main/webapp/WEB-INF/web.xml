@@ -416,6 +416,18 @@
     <url-pattern>/findSeverityGreaterThanThree</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findSeverityGreaterThanFive</display-name>
+    <servlet-name>findSeverityGreaterThanFive</servlet-name>
+    
+    <servlet-class>user.web.servlet.findSeverityGreaterThanFive</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findSeverityGreaterThanFive</servlet-name>
+    <url-pattern>/findSeverityGreaterThanFive</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
