@@ -29,7 +29,6 @@ public class User_exercise {
 	public void setExerciseID(String exercise_id) {
 		this.exercise_id = exercise_id;
 	}
-}
 
 	@Override
 	public String toString() {
