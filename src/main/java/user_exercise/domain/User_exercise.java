@@ -13,7 +13,6 @@ public class User_exercise {
 	
 	private String user_id;
 	private String exercise_id;
-	// more ??
 	
 	public String getUserID() {
 		return user_id;
