@@ -22,20 +22,12 @@
   
   <body>
   <h1>Update User Injury</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/User_injuryServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Injury ID   :<input type="text" name="injury_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Injury ID   :<input type="text" name="injury_id" value="${form.injury_id }"/>
+	<span style="color: red; font-weight: 900">${errors.injury_id }</span>
 	<br/>
-	User ID：<input type="text" name="user_id" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	User Injury Name	：<input type="text" name="user_injury_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	User Injury Description	：<input type="text" name="user_injury_description" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
+	
 	<input type="submit" value="Update User Injury"/>
 </form>
   </body>

@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete User Injury</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/User_injuryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Injury ID   :<input type="text" name="user_injury_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Injury ID   :<input type="text" name="injury_id" value="${form.injury_id }"/>
+	<span style="color: red; font-weight: 900">${errors.injury_id }</span>
 	<br/>
 
 	<input type="submit" value="Delete User Injury"/>

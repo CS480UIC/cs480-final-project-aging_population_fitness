@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete User Injury</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,24 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete User_injury</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/User_injuryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="username" value="${user_injury.getInjuryID() }"/>
+	Injury ID    :<input type="text" name="injury_id" value="${user_injury.getInjuryID() }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	User ID    :<input type="text" name="user_id" value="${user_injury.getUserID() }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	User Injury Name：<input type="text" name="user_injury_name" value="${user_injury.getUserInjuryName() }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	User Injury Description	：<input type="text" name="user_injury_description" value="${user_injury.getUserInjuryDescription() }" disabled/>
+	<br/>
+	User Injury Severity	：<input type="text" name="user_injury_severity" value="${user_injury.getUserInjurySeverity() }" disabled/>
+	<br/>
+	User Injury Date	：<input type="text" name="user_injury_date" value="${user_injury.getUserInjuryDate() }" disabled/>
+	<br/>
+	<input type="submit" value="Delete User Injury"/>
 </form>
 
 </body>

@@ -22,18 +22,22 @@
   
   <body>
   <h1>Create User Injury</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Injury ID    :<input type="text" name="injury_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/User_injuryServletCreate'/>" method="post">
+	
+	User ID：<input type="text" name="user_id" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
-	User ID：<input type="text" name="user_id" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	User Injury Name	：<input type="text" name="user_injury_name" value="${form.user_injury_name }"/>
+	<span style="color: red; font-weight: 900">${errors.user_injury_name }</span>
 	<br/>
-	User Injury Name	：<input type="text" name="user_injury_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	User Injury Description	：<input type="text" name="user_injury_description" value="${form.user_injury_description }"/>
+	<span style="color: red; font-weight: 900">${errors.user_injury_description }</span>
 	<br/>
-	User Injury Description	：<input type="text" name="user_injury_description" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	User Injury Severity	：<input type="text" name="user_injury_severity" value="${form.user_injury_severity }"/>
+	<span style="color: red; font-weight: 900">${errors.user_injury_severity }</span>
+	<br/>
+	User Injury Date	：<input type="text" name="user_injury_date" value="${form.user_injury_date }"/>
+	<span style="color: red; font-weight: 900">${errors.user_injury_date }</span>
 	<br/>
 	<input type="submit" value="Create User Injury"/>
 </form>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read User Injury Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,20 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read User Injury Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	Injury ID    :<input type="text" name="injury_id" value="${user_injury.getInjuryID() }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	User ID    :<input type="text" name="user_id" value="${user_injury.getUserID() }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	User Injury Name：<input type="text" name="user_injury_name" value="${user_injury.getUserInjuryName() }" disabled/>
+	<br/>
+	User Injury Description	：<input type="text" name="user_injury_description" value="${user_injury.getUserInjuryDescription() }" disabled/>
+	<br/>
+	User Injury Severity	：<input type="text" name="user_injury_severity" value="${user_injury.getUserInjurySeverity() }" disabled/>
+	<br/>
+	User Injury Date	：<input type="text" name="user_injury_date" value="${user_injury.getUserInjuryDate() }" disabled/>
 	<br/>
 </form>
 
