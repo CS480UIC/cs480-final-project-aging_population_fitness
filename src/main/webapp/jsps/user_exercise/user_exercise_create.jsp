@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Exercise</title>
+    <title>Create User Exercise</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,17 @@
   </head>
   
   <body>
-  <h1>Update Exercise</h1>
-<form action="<c:url value='/ExerciseServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Exercise ID    :<input type="text" name="exercise_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Create User Exercise</h1>
+<form action="<c:url value='/User_exerciseServletCreate'/>" method="post">
+	
+	User ID	：<input type="text" name="user_id" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
+	<br/>
+	Exercise ID	：<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
 	
-
-	<input type="submit" value="Update Exercise"/>
+	<input type="submit" value="Create User Exercise"/>
 </form>
   </body>
 </html>

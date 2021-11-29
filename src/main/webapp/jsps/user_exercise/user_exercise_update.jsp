@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Exercise Output</title>
+    <title>Update User Exercise</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,17 +21,15 @@
   </head>
   
   <body>
-  <h1>Read Exercise Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Exercise Name    :<input type="text" name="exercise_name" value="${exercise.getExerciseName() }" disabled/>
+  <h1>Update User Exercise</h1>
+<form action="<c:url value='/User_exerciseServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	User ID    :<input type="text" name="user_id" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
-	Exercise Description     ：<input type="text" name="exercise_description" value="${exercise.getExerciseDescription() }" disabled/>
-	<br/>
-	Exercise Difficulty     ：<input type="text" name="exercise_difficulty" value="${exercise.getExerciseDifficulty() }" disabled/>
-	<br/>
-</form>
+	
 
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+	<input type="submit" value="Update User Exercise"/>
+</form>
+  </body>
 </html>

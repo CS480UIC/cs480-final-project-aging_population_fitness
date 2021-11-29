@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Exercise</title>
+    <title>Delete User Exercise</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,27 @@
   </head>
   
   <body>
-  <h1>Update Exercise</h1>
-<form action="<c:url value='/ExerciseServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Exercise ID    :<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+  <h1>Update User Exercise</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form>
+	User ID    :<input type="text" name="user_id" value="${exercise.getUserID() }" disabled/>
+	<br/>
+	Exercise ID    :<input type="text" name="exercise_id" value="${exercise.getExerciseID() }" disabled/>
+	<br/>
+	
+	
+	
+</form>
+<h1>Update the values below</h1>
+<form action="<c:url value='/User_exerciseServletUpdate'/>" method="post">
+		<input type="hidden" name="method" value="update"/>
+				<input type="hidden" name="exercise_id" value="${exercise.getExerciseID() }"/>
+	Exercise ID：<input type="text" name="text" value="${form.exercise_id }"/>
 	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
 	<br/>
 	
-
-	<input type="submit" value="Update Exercise"/>
+	<input type="submit" value="Update User Exercise"/>
 </form>
-  </body>
+
+</body>
 </html>

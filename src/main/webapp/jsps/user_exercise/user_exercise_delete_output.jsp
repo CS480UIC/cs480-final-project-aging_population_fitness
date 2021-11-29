@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Exercise</title>
+    <title>Delete User Exercise</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete Exercise</h1>
+  <h1>Delete User Exercise</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ExerciseServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete Exercise ID    :<input type="text" name="exercise_id" value="${form.exercise_id }"/>
-	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="user_id" value="${exercise.getUserID() }"/>
+			<input type="hidden" name="exercise_id" value="${exercise.getExerciseID() }"/>
+	User ID    :<input type="text" name="user_id" value="${exercise.getUserID() }" disabled/>
 	<br/>
-
-	<input type="submit" value="Delete Exercise"/>
+	
+	Exercise ID：<input type="text" name="exercise_id" value="${exercise.getExerciseID() }" disabled/>
+	<br/>
+	
+	<input type="submit" value="Delete User Exercise"/>
 </form>
-  </body>
+
+</body>
 </html>

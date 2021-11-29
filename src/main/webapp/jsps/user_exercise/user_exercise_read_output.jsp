@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Exercise</title>
+    <title>Read User Exercise Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,16 @@
   </head>
   
   <body>
-  <h1>Delete Exercise</h1>
+  <h1>Read User Exercise Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/ExerciseServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="exercise_id" value="${exercise.getExerciseID() }"/>
-	Exercise Name    :<input type="text" name="exercise_name" value="${exercise.getExerciseName() }" disabled/>
+<form>
+	User ID    :<input type="text" name="user_id" value="${user_exercise.getUserID() }" disabled/>
+	<br/>
+	Exercise ID     ：<input type="text" name="exercise_id" value="${user_exercise.getExerciseID() }" disabled/>
 	<br/>
 	
-	Exercise Description：<input type="text" name="exercise_description" value="${exercise.getExerciseDescription() }" disabled/>
-	<br/>
-	exercise Difficulty	：<input type="text" name="exercise_difficulty" value="${exercise.getExerciseDifficulty()}" disabled/>
-	<br/>
-	<input type="submit" value="Delete Exercise"/>
 </form>
 
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>

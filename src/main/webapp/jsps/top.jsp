@@ -18,7 +18,7 @@
 	-->
 <style type="text/css">
 	body {
-		background: #9146b4;
+		background: #86EEEB;
 	}
 	a {
 		text-transform:none;
@@ -50,6 +50,7 @@
 			<a href="<c:url value='/jsps/benefit/menu.jsp'/>" target="body">CRUD Benefit</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/exercise/menu.jsp'/>" target="body">CRUD Exercise</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/exercise_injury/menu.jsp'/>" target="body">CRUD Exercise Injury</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/user_exercise/menu.jsp'/>" target="body">CRUD User Exercise</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>

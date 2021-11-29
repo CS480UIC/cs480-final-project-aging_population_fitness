@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Exercise </h1>
     <br>
-	<a href="<c:url value='/jsps/exercise/exercise_create.jsp'/>" target="_parent">Create Exercise</a> |&nbsp; 
-	<a href="<c:url value='/jsps/exercise/exercise_read.jsp'/>" target="_parent">Read Exercise</a> |&nbsp;
-	<a href="<c:url value='/jsps/exercise/exercise_update.jsp'/>" target="_parent">Update Exercise</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/exercise/exercise_delete.jsp'/>" target="_parent">Delete Exercise</a>	
+	<a href="<c:url value='/jsps/user_exercise/user_exercise_create.jsp'/>" target="_parent">Create User Exercise</a> |&nbsp; 
+	<a href="<c:url value='/jsps/user_exercise/user_exercise_read.jsp'/>" target="_parent">Read User Exercise</a> |&nbsp;
+	<a href="<c:url value='/jsps/user_exercise/user_exercise_update.jsp'/>" target="_parent">Update User Exercise</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/user_exercise/user_exercise_delete.jsp'/>" target="_parent">Delete User Exercise</a>	
 	    
   </body>
 </html>
