@@ -52,6 +52,53 @@
   
   <servlet>
     <description></description>
+    <display-name>User_profileServletCreate</display-name>
+    <servlet-name>User_profileServletCreate</servlet-name>
+    <servlet-class>user_profile.web.servlet.User_profileServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_profileServletCreate</servlet-name>
+    <url-pattern>/User_profileServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>User_profileServletRead</display-name>
+    <servlet-name>User_profileServletRead</servlet-name>
+    <servlet-class>user_profile.web.servlet.User_profileServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_profileServletRead</servlet-name>
+    <url-pattern>/User_profileServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>User_profileServletUpdate</display-name>
+    <servlet-name>User_profileServletUpdate</servlet-name>
+    <servlet-class>entity1.web.servlet.Entity1ServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_profileServletUpdate</servlet-name>
+    <url-pattern>/User_profileServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>User_profileServletDelete</display-name>
+    <servlet-name>User_profileServletDelete</servlet-name>
+    <servlet-class>user_profile.web.servlet.User_profileServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_profileServletDelete</servlet-name>
+    <url-pattern>/User_profileServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>ExerciseServletCreate</display-name>
     <servlet-name>ExerciseServletCreate</servlet-name>
     <servlet-class>exercise.web.servlet.ExerciseServletCreate</servlet-class>
