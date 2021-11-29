@@ -1,16 +1,16 @@
-package user_profile.service;
+package user_injury.service;
 
 
-import user_profile.dao.User_profileDao;
-import user_profile.domain.User_profile;
+import user_injury.dao.User_injuryDao;
+import user_injury.domain.User_injury;
 
 /**
  * logic functions such as register, login
  * @author Aayush Makharia
  *
  */
-public class User_profileService {
-	private User_profileDao user_profileDao = new User_profileDao();
+public class User_injuryService {
+	private User_injuryDao user_injuryDao = new User_injuryDao();
 	
 	/**
 	 * register a Exercise
@@ -19,11 +19,11 @@ public class User_profileService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(User_profile form) throws User_profileException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(User_injury form) throws User_injuryException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
 		//Exercise exercise = exerciseDao.findByUsername(form.getUsername());
 		//if(exercise.getUsername()!=null && exercise.getUsername().equals(form.getUsername())) throw new ExerciseException("This user name has been registered!");
-		user_profileDao.add(form);
+		user_injuryDao.add(form);
 	}
 	/**
 	 * Login function
