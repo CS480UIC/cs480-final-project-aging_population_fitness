@@ -1,4 +1,4 @@
-package exercise.web.servlet;
+package user_profile.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import exercise.dao.ExerciseDao;
-import exercise.domain.Exercise;
+import user_profile.dao.User_profileDao;
+import user_profile.domain.User_profile;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class ExerciseServletUpdate extends HttpServlet {
+public class User_profileServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public ExerciseServletUpdate() {
+	public User_profileServletUpdate() {
 		super();
 	}
 
@@ -41,13 +41,13 @@ public class ExerciseServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		ExerciseDao exercisedao = new ExerciseDao();
-		Exercise exercise = null;
+		User_profileDao user_profiledao = new User_profileDao();
+		User_profile user_profile = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				exercise = exercisedao.findByExerciseID(request.getParameter("exercise_id"));
+				user_profile = user_profiledao.findByUserID(request.getParameter("user_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,20 +56,20 @@ public class ExerciseServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(exercise.getExerciseID()!=null){
-				request.setAttribute("exercise", exercise);
-				request.getRequestDispatcher("/jsps/exercise/exercise_update_output.jsp").forward(request, response);
+			if(user_profile.getUserID()!=null){
+				request.setAttribute("user id", user_profile);
+				request.getRequestDispatcher("/jsps/user_profile/user_profile_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/exercise/exercise_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Exercise form = new Exercise();
+			User_profile form = new User_profile();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -78,13 +78,12 @@ public class ExerciseServletUpdate extends HttpServlet {
 				
 			}
 			
-			form.setExerciseName(info.get(2));
-			form.setExerciseDescription(info.get(3));
-			form.setExerciseDifficulty(info.get(4));
-			form.setExerciseID(request.getParameter("exercise_id"));
+			form.setUserName(info.get(2));
+			form.setProfileName(info.get(3));
+			form.setUserID(request.getParameter("user_id"));
 
 			try {
-				exercisedao.update(form);
+				user_profiledao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -94,7 +93,7 @@ public class ExerciseServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/exercise/exercise_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
 		}
 	}
 }
