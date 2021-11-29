@@ -53,6 +53,7 @@ public class User_injuryServletCreate extends HttpServlet {
 		/* here */
 		form.setUserName(info.get(0));
 		form.setinjuryName(info.get(1));
+		form.setinjuryName(info.get(2));
 		
 		try {
 			user_injuryservice.create(form);
