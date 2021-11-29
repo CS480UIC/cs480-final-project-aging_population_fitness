@@ -78,7 +78,7 @@
     <description></description>
     <display-name>User_profileServletUpdate</display-name>
     <servlet-name>User_profileServletUpdate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletUpdate</servlet-class>
+    <servlet-class>user_profile.web.servlet.User_profileServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>User_profileServletUpdate</servlet-name>
@@ -95,6 +95,53 @@
   <servlet-mapping>
     <servlet-name>User_profileServletDelete</servlet-name>
     <url-pattern>/User_profileServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>User_injuryServletCreate</display-name>
+    <servlet-name>User_injuryServletCreate</servlet-name>
+    <servlet-class>user_injury.web.servlet.User_profileServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_injuryServletCreate</servlet-name>
+    <url-pattern>/User_injuryServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>User_injuryServletRead</display-name>
+    <servlet-name>User_injuryServletRead</servlet-name>
+    <servlet-class>user_injury.web.servlet.User_injuryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_injuryServletRead</servlet-name>
+    <url-pattern>/User_injuryServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>User_injuryServletUpdate</display-name>
+    <servlet-name>User_injuryServletUpdate</servlet-name>
+    <servlet-class>user_injury.web.servlet.User_injuryServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_injuryServletUpdate</servlet-name>
+    <url-pattern>/User_injuryServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>User_injuryServletDelete</display-name>
+    <servlet-name>User_injuryServletDelete</servlet-name>
+    <servlet-class>user_injury.web.servlet.User_injuryServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User_injuryServletDelete</servlet-name>
+    <url-pattern>/User_injuryServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
