@@ -1,4 +1,4 @@
-package exercise.web.servlet;
+package user_injury.web.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,21 +6,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import exercise.dao.ExerciseDao;
-import exercise.domain.Exercise;
+import user_injury.dao.User_injuryDao;
+import user_injury.domain.User_injury;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class ExerciseServletDelete extends HttpServlet {
+public class User_injuryServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExerciseServletDelete() {
+    public User_injuryServletDelete() {
         super();
     }
     
@@ -36,12 +36,12 @@ public class ExerciseServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		ExerciseDao exerciseDao = new ExerciseDao();
-		Exercise exercise = null;
+		User_injuryDao user_injuryDao = new User_injuryDao();
+		User_injury user_injury = null;
 		if(method.equals("search"))
 		{
 			try {
-				exercise = exerciseDao.findByExerciseID(request.getParameter("exercise_id"));
+				user_injury = user_injuryDao.findByUserID(request.getParameter("user_id")); /* here */
 				
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -51,22 +51,22 @@ public class ExerciseServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(exercise.getExerciseID()!=null){
-						System.out.println(exercise);
-						request.setAttribute("exercise", exercise);
-						request.getRequestDispatcher("/jsps/exercise/exercise_delete_output.jsp").forward(request, response);			
+			if(user_injury.getUserID()!=null){ /* here */
+						System.out.println(user_injury);
+						request.setAttribute("user injury", user_injury);
+						request.getRequestDispatcher("/jsps/user_injury/user_injury_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/exercise/exercise_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				System.out.print("exercise_id before delete call: ");
-				System.out.println(exercise);	//test line
-				exerciseDao.delete(request.getParameter("exercise_id"));
+				System.out.print("user_id before delete call: "); /* here */
+				System.out.println(user_injury);	//test line
+				user_injuryDao.delete(request.getParameter("user_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -75,7 +75,7 @@ public class ExerciseServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/exercise/exercise_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 		}
 	}
 }

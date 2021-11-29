@@ -23,7 +23,7 @@ public class User_profile {
 		this.user_id = user_id;
 	}
 	
-	public String getUsername() {
+	public String getUserName() {
 		return username;
 	}
 
@@ -36,9 +36,9 @@ public class User_profile {
 	}
 
 	public void setProfileName(String profileName) {
-		this.profile_name = profile_name;
+		this.profile_name = profileName;
 	}
-}
+
 
 	@Override
 	public String toString() {

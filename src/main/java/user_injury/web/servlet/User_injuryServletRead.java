@@ -1,4 +1,4 @@
-package exercise.web.servlet;
+package user_injury.web.servlet;
 
 import java.io.IOException;
 
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import exercise.dao.ExerciseDao;
-import exercise.domain.Exercise;
+import user_injury.dao.User_injuryDao;
+import user_injury.domain.User_injury;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class ExerciseServletRead extends HttpServlet {
+public class User_injuryServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExerciseServletRead() {
+    public User_injuryServletRead() {
         super();
     }
     
@@ -37,12 +37,12 @@ public class ExerciseServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Exercise exercise = null;
-		ExerciseDao exerciseDao = new ExerciseDao();
+		User_injury user_injury = null;
+		User_injuryDao user_injuryDao = new User_injuryDao();
 		
 		try {
-			exercise = exerciseDao.findByExerciseID(request.getParameter("exercise_id"));
-			System.out.println(exercise);
+			user_injury = user_injuryDao.findByUserID(request.getParameter("user_id")); /* here */
+			System.out.println(user_injury);
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -51,14 +51,14 @@ public class ExerciseServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(exercise.getExerciseID()!=null){
-					System.out.println(exercise);
-					request.setAttribute("exercise", exercise);
-					request.getRequestDispatcher("/jsps/exercise/exercise_read_output.jsp").forward(request, response);
+		if(user_injury.getUserID()!=null){ /* here */
+					System.out.println(user_injury);
+					request.setAttribute("user injury", user_injury);
+					request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Exercise not found");
-			request.getRequestDispatcher("/jsps/exercise/exercise_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "User injury not found");
+			request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 		}
 	}
 }
