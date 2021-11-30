@@ -40,7 +40,7 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/User_injuryServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${user_injury.getInjuryID() }"/>
+				<input type="hidden" name="injury_id" value="${user_injury.getInjuryID() }"/>
 	User ID：<input type="text" name="user_id" value="${form.user_id }"/>
 	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>

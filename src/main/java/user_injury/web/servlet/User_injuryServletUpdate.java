@@ -57,12 +57,12 @@ public class User_injuryServletUpdate extends HttpServlet {
 			}
 
 			if(user_injury.getInjuryID()!=null){ /* here */
-				request.setAttribute("injury_id", user_injury);
+				request.setAttribute("user_injury", user_injury);
 				request.getRequestDispatcher("/jsps/user_injury/user_injury_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
+				request.setAttribute("msg", "User Injury not found");
 				request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 			}
 		}
@@ -79,13 +79,15 @@ public class User_injuryServletUpdate extends HttpServlet {
 			}
 			
 			/* here */
+			
 			form.setUserID(info.get(2));
 			form.setUserInjuryName(info.get(3));
 			form.setUserInjuryDescription(info.get(4));
 			form.setUserInjurySeverity(info.get(5));
 			form.setUserInjuryDate(info.get(6));
-			form.setUserID(request.getParameter("injury_id"));
-
+			form.setInjuryID(request.getParameter("injury_id"));
+			System.out.println("In ServletUdpate");
+			System.out.println( form.toString() );
 			try {
 				user_injurydao.update(form);
 
@@ -96,7 +98,7 @@ public class User_injuryServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
+			request.setAttribute("msg", "User Injury Updated");
 			request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 		}
 	}

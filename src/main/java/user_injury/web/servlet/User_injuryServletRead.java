@@ -53,7 +53,7 @@ public class User_injuryServletRead extends HttpServlet {
 		
 		if(user_injury.getInjuryID()!=null){ /* here */
 					System.out.println(user_injury);
-					request.setAttribute("user injury", user_injury);
+					request.setAttribute("user_injury", user_injury);
 					request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 			}
 			else{

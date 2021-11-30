@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/User_injuryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${user_injury.getInjuryID() }"/>
+		<input type="hidden" name="injury_id" value="${user_injury.getInjuryID() }"/>
 	Injury ID    :<input type="text" name="injury_id" value="${user_injury.getInjuryID() }" disabled/>
 	<br/>
 	User ID    :<input type="text" name="user_id" value="${user_injury.getUserID() }" disabled/>

@@ -53,11 +53,11 @@ public class User_injuryServletDelete extends HttpServlet {
 		
 			if(user_injury.getInjuryID()!=null){ /* here */
 						System.out.println(user_injury);
-						request.setAttribute("user injury", user_injury);
+						request.setAttribute("user_injury", user_injury);
 						request.getRequestDispatcher("/jsps/user_injury/user_injury_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
+				request.setAttribute("msg", "User Injury not found");
 				request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 			}
 		}
@@ -74,7 +74,7 @@ public class User_injuryServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
+			request.setAttribute("msg", "User Injury Deleted");
 			request.getRequestDispatcher("/jsps/user_injury/user_injury_read_output.jsp").forward(request, response);
 		}
 	}

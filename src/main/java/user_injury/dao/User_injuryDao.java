@@ -31,7 +31,7 @@ public class User_injuryDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
-		    String sql = "select * from user_injury where user_id=?";
+		    String sql = "select * from user_injury where injury_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,injury_id); /* here */
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -40,6 +40,7 @@ public class User_injuryDao {
 		    	String injuryID = resultSet.getString("injury_id");
 		    	System.out.println(injury_id);		//testing line
 		    	System.out.println(injuryID);		//testing line
+		    	
 		    	if(injuryID.equals(injury_id)){
 		    		System.out.println("theyre equal");
 		    		user_injury.setInjuryID(resultSet.getString("injury_id"));
@@ -49,6 +50,7 @@ public class User_injuryDao {
 		    		user_injury.setUserInjurySeverity(resultSet.getString("user_injury_severity"));
 		    		user_injury.setUserInjuryDate(resultSet.getString("user_injury_date"));
 		    	}
+		    	System.out.println( user_injury.toString() );
 		    }
 		    connect.close();
 		} catch(SQLException e) {
