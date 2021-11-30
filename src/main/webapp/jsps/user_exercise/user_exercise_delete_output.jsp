@@ -25,12 +25,12 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ExerciseServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="user_id" value="${exercise.getUserID() }"/>
-			<input type="hidden" name="exercise_id" value="${exercise.getExerciseID() }"/>
-	User ID    :<input type="text" name="user_id" value="${exercise.getUserID() }" disabled/>
+		<input type="hidden" name="user_id" value="${user_exercise.getUserID() }"/>
+			<input type="hidden" name="exercise_id" value="${user_exercise.getExerciseID() }"/>
+	User ID    :<input type="text" name="user_id" value="${user_exercise.getUserID() }" disabled/>
 	<br/>
 	
-	Exercise ID：<input type="text" name="exercise_id" value="${exercise.getExerciseID() }" disabled/>
+	Exercise ID：<input type="text" name="exercise_id" value="${user_exercise.getExerciseID() }" disabled/>
 	<br/>
 	
 	<input type="submit" value="Delete User Exercise"/>

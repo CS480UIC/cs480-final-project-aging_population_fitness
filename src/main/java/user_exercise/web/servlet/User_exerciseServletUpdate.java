@@ -57,12 +57,12 @@ public class User_exerciseServletUpdate extends HttpServlet {
 			}
 
 			if(user_exercise.getUserID()!=null && user_exercise.getExerciseID()!=null){
-				request.setAttribute("user id", user_exercise);
+				request.setAttribute("user_exercise", user_exercise);
 				request.getRequestDispatcher("/jsps/user_exercise/user_exercise_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
+				request.setAttribute("msg", "User Exercise not found");
 				request.getRequestDispatcher("/jsps/user_exercise/user_exercise_read_output.jsp").forward(request, response);
 			}
 		}
@@ -78,11 +78,10 @@ public class User_exerciseServletUpdate extends HttpServlet {
 				
 			}
 			
-			form.setUserID(info.get(2));
-			form.setExerciseID(info.get(3));
+			form.setExerciseID(info.get(2));
 			form.setUserID(request.getParameter("user_id"));
-			form.setExerciseID(request.getParameter("exercise_id"));
-
+			form.setNewExerciseID(request.getParameter("new_exercise_id"));
+			System.out.println(form.toString());
 			try {
 				user_exercisedao.update(form);
 
@@ -93,7 +92,7 @@ public class User_exerciseServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
+			request.setAttribute("msg", "User Exercsie Updated");
 			request.getRequestDispatcher("/jsps/user_exercise/user_exercise_read_output.jsp").forward(request, response);
 		}
 	}

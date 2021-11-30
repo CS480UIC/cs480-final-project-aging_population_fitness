@@ -53,7 +53,7 @@ public class User_exerciseServletDelete extends HttpServlet {
 		
 			if(user_exercise.getUserID()!=null && user_exercise.getExerciseID()!=null){
 						System.out.println(user_exercise);
-						request.setAttribute("user exercise", user_exercise);
+						request.setAttribute("user_exercise", user_exercise);
 						request.getRequestDispatcher("/jsps/user_exercise/user_exercise_delete_output.jsp").forward(request, response);			
 				}
 				else{
@@ -74,7 +74,7 @@ public class User_exerciseServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
+			request.setAttribute("msg", "User Exercise Deleted");
 			request.getRequestDispatcher("/jsps/user_exercise/user_exercise_read_output.jsp").forward(request, response);
 		}
 	}

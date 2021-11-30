@@ -53,7 +53,7 @@ public class User_exerciseServletRead extends HttpServlet {
 		
 		if(user_exercise.getUserID()!=null && user_exercise.getExerciseID()!=null){
 					System.out.println(user_exercise);
-					request.setAttribute("user exercise", user_exercise);
+					request.setAttribute("user_exercise", user_exercise);
 					request.getRequestDispatcher("/jsps/user_exercise/user_exercise_read_output.jsp").forward(request, response);
 			}
 			else{

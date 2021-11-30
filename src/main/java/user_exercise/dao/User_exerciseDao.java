@@ -34,7 +34,7 @@ public class User_exerciseDao {
 		    String sql = "select * from user_exercise where user_id=? and exercise_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,user_id);
-		    preparestatement.setString(1,exercise_id);
+		    preparestatement.setString(2,exercise_id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
@@ -93,12 +93,13 @@ public class User_exerciseDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE user_exercise SET user_id = ?, exercise_id = ? where user_id = ? AND exercise_id = ?;";
+			String sql = "UPDATE user_exercise SET exercise_id = ? where user_id = ? AND exercise_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUserID());
-			preparestatement.setString(2,form.getExerciseID()); // same thing
-		    preparestatement.setString(3,form.getUserID());
-		    preparestatement.setString(4,form.getExerciseID()); // same thing
+			preparestatement.setString(1,form.getNewExerciseID());
+		    preparestatement.setString(2,form.getUserID());
+			preparestatement.setString(3,form.getExerciseID()); // same thing
+		    //preparestatement.setString(3,form.getUserID());
+		    //preparestatement.setString(4,form.getExerciseID()); // same thing
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

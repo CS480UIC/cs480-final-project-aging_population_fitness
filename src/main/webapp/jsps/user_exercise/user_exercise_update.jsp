@@ -27,6 +27,9 @@
 	User ID    :<input type="text" name="user_id" value="${form.user_id }"/>
 	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
+	Exercise ID    :<input type="text" name="exercise_id" value="${form.exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
+	<br/>
 	
 
 	<input type="submit" value="Update User Exercise"/>

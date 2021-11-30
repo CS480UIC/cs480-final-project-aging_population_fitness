@@ -13,6 +13,7 @@ public class User_exercise {
 	
 	private String user_id;
 	private String exercise_id;
+	private String new_exercise_id;
 	
 	public String getUserID() {
 		return user_id;
@@ -29,10 +30,19 @@ public class User_exercise {
 	public void setExerciseID(String exercise_id) {
 		this.exercise_id = exercise_id;
 	}
+	
+	public String getNewExerciseID() {
+		return new_exercise_id;
+	}
+
+	public void setNewExerciseID(String new_exercise_id) {
+		this.new_exercise_id = new_exercise_id;
+	}
 
 	@Override
 	public String toString() {
 		return "User_exercise [ user_id=" + user_id + ", exercise_id="
-				+ exercise_id + "]";
+				+ exercise_id + ", new_exercise_id="
+						+ new_exercise_id + "]";
 	}
 }

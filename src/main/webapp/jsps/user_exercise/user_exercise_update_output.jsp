@@ -24,9 +24,9 @@
   <h1>Update User Exercise</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User ID    :<input type="text" name="user_id" value="${exercise.getUserID() }" disabled/>
+	User ID    :<input type="text" name="user_id" value="${user_exercise.getUserID() }" disabled/>
 	<br/>
-	Exercise ID    :<input type="text" name="exercise_id" value="${exercise.getExerciseID() }" disabled/>
+	Exercise ID    :<input type="text" name="exercise_id" value="${user_exercise.getExerciseID() }" disabled/>
 	<br/>
 	
 	
@@ -35,9 +35,10 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/User_exerciseServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="exercise_id" value="${exercise.getExerciseID() }"/>
-	Exercise ID：<input type="text" name="text" value="${form.exercise_id }"/>
-	<span style="color: red; font-weight: 900">${errors.exercise_id }</span>
+				<input type="hidden" name="user_id" value="${user_exercise.getUserID() }"/>
+				<input type="hidden" name="exercise_id" value="${user_exercise.getExerciseID() }"/>
+	Exercise ID：<input type="text" name="new_exercise_id" value="${form.new_exercise_id }"/>
+	<span style="color: red; font-weight: 900">${errors.new_exercise_id }</span>
 	<br/>
 	
 	<input type="submit" value="Update User Exercise"/>
