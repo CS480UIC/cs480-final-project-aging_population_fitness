@@ -476,6 +476,18 @@
     <url-pattern>/findUsersAndInjuries</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findExercisesAndBenefits</display-name>
+    <servlet-name>findExercisesAndBenefits</servlet-name>
+    
+    <servlet-class>user.web.servlet.findExercisesAndBenefits</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findExercisesAndBenefits</servlet-name>
+    <url-pattern>/findExercisesAndBenefits</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

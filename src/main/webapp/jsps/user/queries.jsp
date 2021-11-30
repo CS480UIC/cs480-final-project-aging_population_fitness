@@ -39,6 +39,8 @@
     <a href="<c:url value='/findUsersMoreThanTwoInjuries'/>" target="body">Complex Query: Users with more than two injuries</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/findUsersAndInjuries'/>" target="body">Complex Query: Users and their injuries</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findExercisesAndBenefits'/>" target="body">Complex Query: Exercises and their benefits</a>&nbsp;&nbsp;
     
     
   </body>
