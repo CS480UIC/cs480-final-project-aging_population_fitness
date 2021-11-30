@@ -464,6 +464,18 @@
     <url-pattern>/findUsersMoreThanTwoInjuries</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findUsersAndInjuries</display-name>
+    <servlet-name>findUsersAndInjuries</servlet-name>
+    
+    <servlet-class>user.web.servlet.findUsersAndInjuries</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findUsersAndInjuries</servlet-name>
+    <url-pattern>/findUsersAndInjuries</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
