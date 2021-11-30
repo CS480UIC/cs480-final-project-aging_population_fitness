@@ -78,4 +78,9 @@ public class UserService {
 		
 	}
 	
+	public List<Object> findExercisesAndBenefits() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return userDao.findExercisesAndBenefits();
+		
+	}
+	
 }
