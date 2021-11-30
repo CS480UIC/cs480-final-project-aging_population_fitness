@@ -26,7 +26,7 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Simple: Average user injury severity greater than three</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Simple Query: Average user injury severity greater than three</a>&nbsp;&nbsp;
  	<br>
     <a href="<c:url value='/findDifficultyGreaterThanFive'/>" target="body">Simple Query: Difficulty Greater than 5</a>&nbsp;&nbsp;
     <br>
@@ -37,6 +37,8 @@
     <a href="<c:url value='/findBenefitsExerciseChest'/>" target="body">Complex Query: Benefits of exercises where chest is mentioned in the exercise description</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/findUsersMoreThanTwoInjuries'/>" target="body">Complex Query: Users with more than two injuries</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findUsersAndInjuries'/>" target="body">Complex Query: Users and their injuries</a>&nbsp;&nbsp;
     
     
   </body>
