@@ -23,7 +23,7 @@
   <body>
   <h1>Delete User Exercise</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/ExerciseServletDelete'/>" method="post">
+<form action="<c:url value='/User_exerciseServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="user_id" value="${user_exercise.getUserID() }"/>
 			<input type="hidden" name="exercise_id" value="${user_exercise.getExerciseID() }"/>

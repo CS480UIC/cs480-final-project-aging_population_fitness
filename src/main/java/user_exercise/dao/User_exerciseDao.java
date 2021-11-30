@@ -119,13 +119,13 @@ public class User_exerciseDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "delete from user_exercise where user_id=? AND exercise_id = ?";
+			String sql = "delete from user_exercise where user_id=? AND exercise_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setString(1, user_id);
 		    preparestatement.setString(2, exercise_id);
 		    System.out.print( "id to delete: ");
-		    System.out.println( user_id);
-		    System.out.println( exercise_id);
+		    System.out.println( "User id: " + user_id);
+		    System.out.println( "Exercise id: " + exercise_id);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
