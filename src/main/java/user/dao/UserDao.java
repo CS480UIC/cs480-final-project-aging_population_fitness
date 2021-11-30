@@ -246,5 +246,33 @@ public class UserDao {
 		return list;
 		
 	}
+	
+	public List<Object> findUsersAndInjuries() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
+			String sql = "SELECT username, profile_name, user_injury_name, user_injury_description, user_injury_severity\r\n"
+					+ "FROM user_profile\r\n"
+					+ "JOIN user_injury\r\n"
+					+ "ON user_profile.user_id = user_injury.user_id;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Table table = new Table();
+				table.setCol1(resultSet.getString("username"));
+				table.setCol2(resultSet.getString("profile_name"));
+				table.setCol3(resultSet.getString("user_injury_name"));
+				table.setCol4(resultSet.getString("user_injury_description"));
+				table.setCol5(resultSet.getString("user_injury_severity"));
+	    		list.add(table);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 		
 }
