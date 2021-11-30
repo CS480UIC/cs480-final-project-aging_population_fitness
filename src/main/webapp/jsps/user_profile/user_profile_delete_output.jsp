@@ -23,17 +23,16 @@
   <body>
   <h1>Delete User Profile</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/User_profileServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="user_id" value="${user_profile.getUserID() }"/>
+	User ID    :<input type="text" name="user_id" value="${user_profile.getUserID() }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Username：<input type="text" name="username" value="${user_profile.getUserName() }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Profile Name	：<input type="text" name="profile_name" value="${user_profile.getProfileName() }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete User Profile"/>
 </form>
 
 </body>

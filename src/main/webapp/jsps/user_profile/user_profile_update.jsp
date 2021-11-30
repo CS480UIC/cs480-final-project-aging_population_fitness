@@ -22,17 +22,12 @@
   
   <body>
   <h1>Update User Profile</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/User_profileServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update User ID   :<input type="text" name="user_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update User ID   :<input type="text" name="user_id" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
-	Username    ：<input type="text" name="username" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Profile Name	：<input type="text" name="profile_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
+	
 	<input type="submit" value="Update User Profile "/>
 </form>
   </body>
