@@ -35,6 +35,8 @@
     <a href="<c:url value='/findProfileNamesInjuryAge'/>" target="body">Complex Query: Profile Names with injury age</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/findBenefitsExerciseChest'/>" target="body">Complex Query: Benefits of exercises where chest is mentioned in the exercise description</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findUsersMoreThanTwoInjuries'/>" target="body">Complex Query: Users with more than two injuries</a>&nbsp;&nbsp;
     
     
   </body>

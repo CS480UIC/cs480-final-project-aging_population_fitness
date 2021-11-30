@@ -200,5 +200,51 @@ public class UserDao {
 		return list;
 		
 	}
+	
+	public List<Object> findBenefitsExerciseChest() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
+			String sql = "SELECT * FROM benefits_of_exercise_with_chest_in_description";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Table table = new Table();
+				table.setCol1(resultSet.getString("benefit_id"));
+				table.setCol2(resultSet.getString("exercise_id"));
+				table.setCol3(resultSet.getString("benefit_name"));
+				table.setCol4(resultSet.getString("benefit_description"));
+	    		list.add(table);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	public List<Object> findUsersMoreThanTwoInjuries() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
+			String sql = "SELECT * FROM users_more_than_two_injuries";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Table table = new Table();
+				table.setCol1(resultSet.getString("user_id"));
+				table.setCol2(resultSet.getString("profile_name"));
+	    		list.add(table);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 		
 }

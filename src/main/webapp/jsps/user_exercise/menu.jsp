@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Exercise </h1>
+    <h1>CRUD operations for User Exercise </h1>
     <br>
 	<a href="<c:url value='/jsps/user_exercise/user_exercise_create.jsp'/>" target="_parent">Create User Exercise</a> |&nbsp; 
 	<a href="<c:url value='/jsps/user_exercise/user_exercise_read.jsp'/>" target="_parent">Read User Exercise</a> |&nbsp;

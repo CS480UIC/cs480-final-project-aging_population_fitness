@@ -452,6 +452,18 @@
     <url-pattern>/findBenefitsExerciseChest</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findUsersMoreThanTwoInjuries</display-name>
+    <servlet-name>findUsersMoreThanTwoInjuries</servlet-name>
+    
+    <servlet-class>user.web.servlet.findUsersMoreThanTwoInjuries</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findUsersMoreThanTwoInjuries</servlet-name>
+    <url-pattern>/findUsersMoreThanTwoInjuries</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

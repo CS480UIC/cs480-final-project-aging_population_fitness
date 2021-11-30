@@ -62,4 +62,15 @@ public class UserService {
 		return userDao.findProfileNamesInjuryAge();
 		
 	}
+	
+	public List<Object> findBenefitsExerciseChest() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return userDao.findBenefitsExerciseChest();
+		
+	}
+	
+	public List<Object> findUsersMoreThanTwoInjuries() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return userDao.findUsersMoreThanTwoInjuries();
+		
+	}
+	
 }
