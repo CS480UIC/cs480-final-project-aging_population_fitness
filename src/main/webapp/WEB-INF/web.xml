@@ -440,6 +440,18 @@
     <url-pattern>/findProfileNamesInjuryAge</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findBenefitsExerciseChest</display-name>
+    <servlet-name>findBenefitsExerciseChest</servlet-name>
+    
+    <servlet-class>user.web.servlet.findBenefitsExerciseChest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findBenefitsExerciseChest</servlet-name>
+    <url-pattern>/findBenefitsExerciseChest</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
