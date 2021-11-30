@@ -26,21 +26,21 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Simple Query: Average user injury severity greater than three</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">1. Simple Query: Average user injury severity greater than three</a>&nbsp;&nbsp;
  	<br>
-    <a href="<c:url value='/findDifficultyGreaterThanFive'/>" target="body">Simple Query: Difficulty Greater than 5</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findDifficultyGreaterThanFive'/>" target="body">2. Simple Query: Difficulty Greater than 5</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findSeverityGreaterThanFive'/>" target="body">Simple Query: User injury severity greater than 5</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findSeverityGreaterThanFive'/>" target="body">3. Simple Query: User injury severity greater than 5</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findProfileNamesInjuryAge'/>" target="body">Complex Query: Profile Names with injury age</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findProfileNamesInjuryAge'/>" target="body">1. Complex Query: Profile Names with injury age</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findBenefitsExerciseChest'/>" target="body">Complex Query: Benefits of exercises where chest is mentioned in the exercise description</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findBenefitsExerciseChest'/>" target="body">2. Complex Query: Benefits of exercises where chest is mentioned in the exercise description</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findUsersMoreThanTwoInjuries'/>" target="body">Complex Query: Users with more than two injuries</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findUsersMoreThanTwoInjuries'/>" target="body">3. Complex Query: Users with more than two injuries</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findUsersAndInjuries'/>" target="body">Complex Query: Users and their injuries</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findUsersAndInjuries'/>" target="body">4. Complex Query: Users and their injuries</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findExercisesAndBenefits'/>" target="body">Complex Query: Exercises and their benefits</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findExercisesAndBenefits'/>" target="body">5. Complex Query: Exercises and their benefits</a>&nbsp;&nbsp;
     
     
   </body>
