@@ -23,9 +23,6 @@
   <body>
   <h1>Create User Profile</h1>
 <form action="<c:url value='/User_profileServletCreate'/>" method="post">
-	User Profile ID    :<input type="text" name="user_id" value="${form.user_id }"/>
-	<span style="color: red; font-weight: 900">${errors.user_id }</span>
-	<br/>
 	Username    ：<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>

@@ -57,7 +57,7 @@ public class User_profileServletUpdate extends HttpServlet {
 			}
 
 			if(user_profile.getUserID()!=null){
-				request.setAttribute("user id", user_profile);
+				request.setAttribute("user_profile", user_profile);
 				request.getRequestDispatcher("/jsps/user_profile/user_profile_update_output.jsp").forward(request, response);
 
 			}
@@ -92,7 +92,7 @@ public class User_profileServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
+			request.setAttribute("msg", "User Profile Updated");
 			request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
 		}
 	}

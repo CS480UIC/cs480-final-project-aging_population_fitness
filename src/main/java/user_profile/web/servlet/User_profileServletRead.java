@@ -53,7 +53,7 @@ public class User_profileServletRead extends HttpServlet {
 		
 		if(user_profile.getUserID()!=null){
 					System.out.println(user_profile);
-					request.setAttribute("user profile", user_profile);
+					request.setAttribute("user_profile", user_profile);
 					request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
 			}
 			else{

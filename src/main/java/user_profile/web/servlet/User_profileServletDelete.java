@@ -53,7 +53,7 @@ public class User_profileServletDelete extends HttpServlet {
 		
 			if(user_profile.getUserID()!=null){
 						System.out.println(user_profile);
-						request.setAttribute("user profile", user_profile);
+						request.setAttribute("user_profile", user_profile);
 						request.getRequestDispatcher("/jsps/user_profile/user_profile_delete_output.jsp").forward(request, response);			
 				}
 				else{
@@ -74,7 +74,7 @@ public class User_profileServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
+			request.setAttribute("msg", "User Profile Deleted");
 			request.getRequestDispatcher("/jsps/user_profile/user_profile_read_output.jsp").forward(request, response);
 		}
 	}

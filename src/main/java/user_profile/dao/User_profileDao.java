@@ -67,7 +67,7 @@ public class User_profileDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "insert into user_profile (username, user_profile) values(?,?,?)";
+			String sql = "insert into user_profile (username, profile_name) values(?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getUserName());
 		    preparestatement.setString(2,form.getProfileName());
@@ -90,7 +90,7 @@ public class User_profileDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE user_profile SET username = ?, user_profile = ? where user_id = ?;";
+			String sql = "UPDATE user_profile SET username = ?, profile_name = ? where user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getUserName());
 			preparestatement.setString(2,form.getProfileName());
