@@ -428,6 +428,18 @@
     <url-pattern>/findSeverityGreaterThanFive</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findProfileNamesInjuryAge</display-name>
+    <servlet-name>findProfileNamesInjuryAge</servlet-name>
+    
+    <servlet-class>user.web.servlet.findProfileNamesInjuryAge</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findProfileNamesInjuryAge</servlet-name>
+    <url-pattern>/findProfileNamesInjuryAge</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

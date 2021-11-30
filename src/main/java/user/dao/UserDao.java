@@ -177,5 +177,28 @@ public class UserDao {
 		return list;
 		
 	}
+	
+	public List<Object> findProfileNamesInjuryAge() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aging_population_fitness", MySQL_user, MySQL_password);
+			String sql = "SELECT * FROM profile_names_with_injury_age";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Table table = new Table();
+				table.setCol1(resultSet.getString("profile_name"));
+				table.setCol2(resultSet.getString("user_injury_name"));
+				table.setCol3(resultSet.getString("DATEDIFF(DATE(NOW()), user_injury_date)"));
+	    		list.add(table);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 		
 }

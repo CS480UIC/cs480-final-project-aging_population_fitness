@@ -26,11 +26,14 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Average user injury severity greater than three</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findSeverityGreaterThanThree'/>" target="body">Simple: Average user injury severity greater than three</a>&nbsp;&nbsp;
  	<br>
     <a href="<c:url value='/findDifficultyGreaterThanFive'/>" target="body">Simple Query: Difficulty Greater than 5</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/findSeverityGreaterThanFive'/>" target="body">Simple Query: User injury severity greater than 5</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findProfileNamesInjuryAge'/>" target="body">Complex Query: Profile Names with injury age</a>&nbsp;&nbsp;
+    
     
   </body>
 </html>

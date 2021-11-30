@@ -57,4 +57,9 @@ public class UserService {
 		return userDao.findSeverityGreaterThanFive();
 		
 	}
+	
+	public List<Object> findProfileNamesInjuryAge() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return userDao.findProfileNamesInjuryAge();
+		
+	}
 }
